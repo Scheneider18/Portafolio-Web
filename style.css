@@ -1,3 +1,32 @@
 header {
     text-align: center;
 }
+
+.seccion{
+    text-align: center;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.encabezado {
+    align-content: center;
+}
