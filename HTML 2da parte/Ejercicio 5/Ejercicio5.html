@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio de autoevaluación -->
+<!-- 3.5 Crear elementos HTML5 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 3.5</title>
+    </head>
+    <body>
+        <h2>3.5 Escriba un elemento (o elementos) de HTML5 para realizar cada una de las siguientes tareas.</h2>
+        <hr>
+        <p>a) Se pidi&oacute; a los estudiantes que calificaran los alimentos en la cafeter&iacute;a, en una 
+            escala del 1 al 10. Use un elemento meter con texto a su izquierda y a su derecha para indicar que
+            la calificaci&oacute;n promedio fue 7 de 10.
+        </p>
+        Clasificaci&oacute;n promedio: 
+        1<meter min="1" max="10" value="7"></meter>10
+        <p>b) Cree un elemento details que muestre el texto "Resultados de la encuesta" en el elemento summary 
+            para la parte (a). Cuando el usuario haga clic en la flecha enseguida del texto de summary, 
+            deber&aacute; aparecer un p&aacute;rrafo que explique sobre la encuesta.
+        </p>
+        <details>
+            <summary>Resultados de la encuesta</summary>
+            <ul>
+                <li>La encuesta se realizo en el ITSX para clasificar la calidad de los alimentos vendidos 
+                    en la cafeteria, obteniendo asi un promedio del 7 de 10.
+                </li>
+            </ul>
+        </details>
+        <p>c) Cree un elemento input text para el primer nombre. El elemento deber&aacute; recibir el enfoque 
+            de manera autom&aacute;tica al momento de desplegar el formulario en un navegador.
+        </p>
+        <form method="post" action="http://www.deitel.com">
+            <p><label>Primer nombre: 
+                <input type="text" autofocus>
+            </label></p>
+        </form>
+        <p>d) Modifique la parte (c) de modo que se elimine el elemento label y use texto en un elemento 
+            placeholder en elemento input.
+        </p>
+        <form method="post" action="http://www.deitel.com">
+            <p>
+                <input type="text" autofocus placeholder="Primer nombre">
+            </p>
+        </form>
+        <p>e) Use un elemento datalist para proveer una lista autocomplete para cinco estados.</p>
+        <p><label>Estado: 
+            <input type="text" id="listaTexto" placeholder="Seleccione un estado" list="estados">
+            <datalist id="estados">
+                <option value="Veracruz"></option>
+                <option value="Monterrey"></option>
+                <option value="Sonora"></option>
+                <option value="Guadalajara"></option>
+                <option value="Oaxaca"></option>
+            </datalist>
+        </label></p>
+        <p>f) Cree un elemento input range que permita al usuario seleccionar un n&uacute;mero del 1 al 100.</p>
+        <p><label>Rango: 0
+            <input type="range" min="1" max="100" value="0"> 100
+        </label></p>
+        <p>g) Especifique que no debe de permitirse el atributo autocomplete en un formulario. Muestre s&oacute;lo 
+            la etiqueta de apertura del formulario.
+        </p>
+        <p>&lt;form method="post" action="http://www.deitel.com" autocomplete="off"&gt;</p>
+        <form method="post" action="http://www.deitel.com" autocomplete="off"></form>
+        <p>h) Use un elemento mark para resaltar el segundo enunciado del siguiete p&aacute;rrafo:</p>
+        <p>Se pidi&oacute; a los estudiantes que calificaran los alimentos en la cafeter&iacute;a 
+            en una escala del 1 al 10. <mark>El resultado promedio fue 7.</mark>
+        </p>
+    </body>
+</html>

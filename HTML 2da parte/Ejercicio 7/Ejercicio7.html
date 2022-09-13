@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 3.7 Formulario con autocomplete -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 3.7</title>
+    </head>
+    <body>
+        <h2>3.7 (Creaci&oacute;n de un formulario con autocomplete).</h2>
+        <hr>
+        <p>Cree un formulario de b&uacute;squeda simple; use un elemento input search en donde el usuario 
+            pueda introducir una consulta de b&uacute;squeda. Use el navegador Web Firefox para probar el 
+            formulario. Escriba Junio y env&iacute;e el formulario. Despu&eacute;s escriba una J en el 
+            elemento input para ver las entradas anteriores que empiezan con J; deber&aacute; aparecer Junio 
+            debajo del elemento input. Escriba Julio y env&iacute;e el formulario de nuevo. Ahora escriba J 
+            en el elemento input para ver las entradas anteriores que empiezan con J; deber&aacute;n aparecer 
+            Junio y Julio debajo del elemento input. Pruebe esto con sus propias consultas de b&uacute;squeda 
+            tambi&eacute;n.
+        </p>
+        <p><strong>Resultado: </strong></p>
+        <form method="post" autocomplete="on">
+            <p><label>Buscar:
+                <input type="search" placeholder="Ingrese búsqueda" autocomplete="on">
+            </label></p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+    </body>
+</html>
