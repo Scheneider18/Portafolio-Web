@@ -32,5 +32,44 @@
                 muy probable que el resto de los navegadores muestren un <em>selector de color</em> tambi&eacute;n.
             </p>
         </section>
+        <section id="2">
+            <h4><em>El atributo autofocus</em></h4>
+            <p>El <strong>atributo focus</strong> (figura 3.1, linea 20) (un atributo opcional que puede usarse 
+                s&oacute;lo en un elemento input del formulario) otorga de maneta autom&aacute;tica el enfoque 
+                al elemento input, lo que permite al usuario escribir en ese elemento de inmediato. La figura 
+                3.3 muestra el uso del elemento <em>autofocus</em> en el elemento <em>color</em> (el primer 
+                elemento input en nuestro formulario), como se despliega en Opera. No necesita incluir autofocus 
+                en sus formularios.
+            </p>
+        </section>
+        <section id="3">
+            <h4><em>Validaci&oacute;n</em></h4>
+            <p>Tradicionalmente ha sido dif&iacute;cil validar la entrada del usuario, como asegurar que se 
+                introduzca una direcci&oacute;n de correo electr&oacute;nico, URL, fecha u hora en el formato 
+                adecuado. Los nuevos tipos <em>input</em> de HTML5 cuentan con <em>validaci&oacute;n 
+                autom&aacute;tica</em> del lado del cliente, con lo que se elimina la necesidad de agregar 
+                c&oacute;digo complicado de JavaScript a nuestras p&aacute;ginas Web para validar la entrada del 
+                usuario; as&iacute; se reduce la cantidad de datos inv&aacute;lidos que se env&iacute;n y, en 
+                consecuencia, disminuye el tr&aacute;fico de Internet entre el servidor y el cliente que se usa 
+                para corregir las entradas inv&aacute;lidas. <em>De todas formas el servidor debe validar toda 
+                la entrada del usuario</em>.
+            </p>
+            <p style="text-indent: 1.5em;">Cuando un usuario introduce datos en un formulario y luego lo 
+                env&iacute;a (en este ejemplo, al hacer clic en el bot&oacute;n <strong>Enviar</strong>), el 
+                navegador verifica de inmediato los elementos de validaci&oacute;n autom&aacute;tica para 
+                asegurar que los datos sean correctos. Por ejemplo, si un usuario introduce un valor de color 
+                hexadecimal incorrecto al usar un navegador que despliegue los elementos <em>color</em> como un 
+                campo de texto (por ejemplo, Internet Explorer), aparecer&aacute; una anotaci&oacute;n para 
+                señalar ese elemento e indicar que se introdujo un valor incorrecto (figura 3.4). La figura 3.5 
+                lista cada uno de los nuevos tipos <em>input</em> de HTML5 y muestra ejemplos de los formatos 
+                correctos requeridos para que cada tipo de datos sea v&aacute;lido.
+            </p>
+        </section>
+        <section id="4">
+            <p style="text-indent: 1.5em;">Si desea pasar por alto la validaci&oacute;, puede agregar el 
+                <strong>atributo formnovalidate</strong> al tipo input <em>submit</em> en la l&iacute;nea 101:
+            </p>
+            <p style="text-align: center;"><mark>&lt;input type = "submit" value = "Enviar" formnovalidate/&gt;</mark></p>
+        </section>
     </body>
 </html>
