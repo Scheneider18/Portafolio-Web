@@ -1,0 +1,13 @@
+/*Hoja de estilos para crear un botón mediante un div y un vínculo*/
+div{
+    border: 2px solid black;
+    background-color: aquamarine;
+    width: fit-content;
+    height: fit-content;
+}
+a{
+    text-decoration-line: none;
+}
+div:hover{
+    background-color: gray;
+}
