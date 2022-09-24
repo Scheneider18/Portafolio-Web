@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.12: transiciones.html -->
+<!-- Transaciones en CSS3. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Transaciones</title>
+        <style type="text/css">
+            img{
+                margin: 80px;
+                -webkit-transition: -webkit-transform 4s ;
+                -moz-transition: -moz-transform 4s;
+                -o-transition: -o-transform 4s;
+                transition: transform 4s;
+            }
+            img:hover{
+                -webkit-transform: rotate(360deg) scale(2, 2);
+                -moz-transform: rotate(360deg) scale(2, 2);
+                -o-transform: rotate(360deg) scale(2, 2);
+                transform: rotate(360deg) scale(2, 2); 
+            }
+        </style>
+    </head>
+    <body>
+        <img src="cpphtp.png" alt="Portada del libro C++ How to Program" width="76" height="100">
+    </body>
+</html>
