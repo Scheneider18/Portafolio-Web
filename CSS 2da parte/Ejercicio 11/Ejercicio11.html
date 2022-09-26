@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 5.11 Fusionar imágenes -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 5.11</title>
+        <style type="text/css">
+            .img{
+                position: absolute;
+                width: 474px;
+                height: 246px;
+                left: 0;
+            }
+            .portada:hover .top{
+                opacity: 0;
+                -webkit-transition: opacity 3s linear;
+                transition: opacity 3s linear;
+            }
+            .portada:hover .top2{
+                opacity: 0;
+                -webkit-transition: opacity 3s linear 4s;
+                transition: opacity 3s linear 4s;
+            }
+            .portada:hover .top3{
+                opacity: 0;
+                -webkit-transition: opacity 3s linear 8s;
+                transition: opacity 3s linear 8s;
+            }
+            .portada:hover .top4{
+                opacity: 0;
+                -webkit-transition: opacity 3s linear 13s;
+                transition: opacity 3s linear 13s;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>5.11 (Fusionar im&aacute;genes)</h2>
+        <p>Modifique el ejemplo 5.14 utilizando cinco im&aacute;genes. Podr&iacute;a se interesante probar 
+            con im&aacute;genes de usted o de un miembro de su familia en distintas edades o en un paisaje en 
+            distintos momentos. Establezca el valor de transition-duration en 3s y de transition-timing-function 
+            en linear.
+        </p>
+        <hr>
+        <div class="portada">
+            <img class="img" src="invierno.jpg" alt="invierno">
+            <img class="img top4" src="otoño.jpg" alt="otoño">
+            <img class="img top3" src="verano.jpg" alt="verano">
+            <img class="img top2" src="primavera.jpg" alt="primavera">
+            <img class="img top" src="estaciones.jpg" alt="estaciones">
+        </div>
+    </body>
+</html>

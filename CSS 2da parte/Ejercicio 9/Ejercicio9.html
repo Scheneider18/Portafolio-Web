@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 5.9 Animación -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 5.9</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: aqua;
+                position: relative;
+                text-align: center;
+                -webkit-animation: movimiento linear 5s 1s infinite alternate;
+                -moz-animation: movimiento linear 5s 1s infinite alternate;
+                animation: movimiento linear 5s 1s infinite alternate;
+            }
+            @-webkit-keyframes movimiento{
+                0%{opacity: 1; left: 50px; top: 0px;}
+                25%{opacity: 1; left: 50px; top: 100px;}
+                50%{opacity: 1; left: 150px; top: 100px;}
+                75%{opacity: 1; left: 150px; top: 0px;}
+                100%{opacity: 1; left: 50px; top: 0px;}
+            }
+            @-moz-keyframes movimiento{
+                0%{opacity: 1; left: 50px; top: 0px;}
+                25%{opacity: 1; left: 50px; top: 100px;}
+                50%{opacity: 1; left: 150px; top: 100px;}
+                75%{opacity: 1; left: 150px; top: 0px;}
+                100%{opacity: 1; left: 50px; top: 0px;}
+            }
+            @keyframes movimiento{
+                0%{opacity: 1; left: 50px; top: 0px;}
+                25%{opacity: 1; left: 50px; top: 100px;}
+                50%{opacity: 1; left: 150px; top: 100px;}
+                75%{opacity: 1; left: 150px; top: 0px;}
+                100%{opacity: 1; left: 50px; top: 0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <h2>5.9 (Animaci&oacute;n)</h2>
+        <p>Cree una animaci&oacute;n infinita de un elemento que se mueva en un patr&oacute;n cuadrado.</p>
+        <hr>
+        <div>Movimiento</div>
+    </body>
+</html>

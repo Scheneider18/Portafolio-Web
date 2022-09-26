@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 5.10 Inclinación -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 5.10</title>
+        <style type="text/css">
+            .skew .textbox {
+                margin-top: 100px;
+                margin-left: 75px;
+                background: lightgreen;
+                height: 100px;
+                width: 200px;
+                padding: 25px 0px;
+                text-align: center;
+                font-size: 250%;
+                border: 3px solid darkgreen;
+                border-radius: 15px;
+                -webkit-animation: skew 3s infinite linear;
+                -moz-animation: skew 3s infinite linear;
+                animation: skew 3s infinite linear;
+            }
+            @-webkit-keyframes skew{
+                from{-webkit-transform: skewY(0deg);}
+                25%{-webkit-transform: skewY(30deg);}
+                50%{-webkit-transform: skewY(0);}
+                75%{-webkit-transform: skewX(30deg);}
+                to{-webkit-transform: skewX(0);}
+            }
+            @-moz-keyframes skew{
+                from{-webkit-transform: skewY(0deg);}
+                25%{-webkit-transform: skewY(30deg);}
+                50%{-webkit-transform: skewY(0);}
+                75%{-webkit-transform: skewX(30deg);}
+                to{-webkit-transform: skewX(0);}
+            }
+            @keyframes skew{
+                from{-webkit-transform: skewY(0deg);}
+                25%{-webkit-transform: skewY(30deg);}
+                50%{-webkit-transform: skewY(0);}
+                75%{-webkit-transform: skewX(30deg);}
+                to{-webkit-transform: skewX(0);}
+            }
+        </style>
+    </head>
+    <body>
+        <h2>5.10 (Inclinaci&oacute;n)</h2>
+        <p>Modifique el ejemplo de inclinaci&oacute;n en la figura 5.13 para inclinar el elemento de arriba 
+            hacia abajo 30deg, despu&eacute;s de izquierda a derecha 30deg, alternando de manera indefinida.
+        </p>
+        <hr>
+        <div class="box skew">
+            <div class="textbox">Inclinar texto</div>
+           </div> 
+    </body>
+</html>

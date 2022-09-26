@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 5.7 Gradiente lineal -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 5.7</title>
+        <style type="text/css">
+            div{
+                width: 500px;
+                height: 500px;
+                text-align: center;
+            }
+            .diagonal{
+                background: -webkit-gradient(
+                    linear, left top, right bottom,
+                    color-stop(12%, red),
+                    color-stop(25%, orange),
+                    color-stop(37%, yellow),
+                    color-stop(50%, green),
+                    color-stop(62%, blue),
+                    color-stop(75%, indigo),
+                    color-stop(87%, violet)
+                );
+                background: -moz-linear-gradient(
+                    top left, red 12%, orange 25%, yellow 37%, green 50%, blue 62%, indigo 75%, 
+                    violet 87%
+                );
+                background: linear-gradient(
+                    135deg, red 12%, orange 25%, yellow 37%, green 50%, blue 62%, indigo 75%, 
+                    violet 87%
+                );
+            }
+        </style>
+    </head>
+    <body>
+        <h2>5.7 (Gradiante lineal)</h2>
+        <p>Cree un elemento div con una anchura (width) y altura (height) de 500px. Cree un gradiante lineal 
+            diagonal utilizando los colores del arco&iacute;ris: rojo, naranja, amarrillo, verde, azul, 
+            &iacute;ndigo, violeta.
+        </p>
+        <hr>
+        <p><strong>Gradiante lineal diagonal</strong></p>
+        <div class="diagonal"></div>
+    </body>
+</html>
