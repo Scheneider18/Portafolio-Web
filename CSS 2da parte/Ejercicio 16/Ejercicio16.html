@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 
-<!-- Fig. 5.18: consultamedios.html -->
-<!-- Uso de consultas de medio para volver a dar formato a una página con base en la anchura del dispositivo. -->
+<!-- Ejercicios de autoevaluación -->
+<!-- 5.16 Consulta de medios -->
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Consulta de medios</title>
+        <title>Ejercicios de autoevaluaci&oacute;n: 5.16</title>
         <style type="text/css">
-            p{
-                margin: 0.9em 0em;
-            }
-            /* estilos para smartphones con anchuras de pantalla de 480px o menos */
             @media handheld and (max-width: 480px), 
             screen and (max-device-width: 480px), 
             screen and (max-width: 480px){
-                div{
+                .multicolumna{
                     -webkit-column-count: 1;
                     column-count: 1;
                 }
             }
-            /* estilos para dispositivos con anchuras de pantalla de 481px a 1024px */
-            @media only screen and (min-width: 481px) and (max-width: 1024px){
-                div{
-                    -webkit-column-count: 2;
-                    column-count: 2;
-                    -webkit-column-gap: 30px;
-                    column-gap: 30px;
-                    -webkit-column-rule: 1px outset black;
-                    column-rule: 1px outset black;
-                }
+            .flotante{
+                background-color: lightgrey;
+                font-size: 1.5em;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: .2em;
+                margin-left: .5em;
+                margin-bottom: .5em;
+                float: right;
+                text-align: right;
+                width: 50%;
             }
-            /* estilos para dispositivos con anchuras de pantalla de 1025px o mayor */
-            @media only screen and (min-width: 1025px){
-                div{
-                    -webkit-column-count: 3;
-                    column-count: 3;
-                    -webkit-column-gap: 30px;
-                    column-gap: 30px;
-                    -webkit-column-rule: 1px outset black;
-                    column-rule: 1px outset black;
-                }
+            .multicolumna{
+                /* establecer el número de columnas en 3 */
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                -o-column-count: 2;
+                column-count: 2;
+                /* establecer el espacio entre columnas en 30px */
+                -webkit-column-gap: 30px;
+                -moz-column-gap: 30px;
+                -o-column-gap: 30px;
+                column-gap: 30px;
+                /* agregar una línea negra de 1px entre cada columna */
+                -webkit-column-rule: 3px outset black;
+                -moz-column-rule: 3px outset black;
+                -o-column-rule: 3px outset black;
+                column-rule: 3px outset black;
             }
         </style>
     </head>
     <body>
-        <div>
+        <h2>5.16 Consulta de medios</h2>
+        <p>Cree su propia p&aacute;gina Web multicolumna y use consultas de medios para ajustar el formato y 
+            usar una columna para dispositivos m&oacute;viles que tengan una anchura m&aacute;xima de 480px.
+        </p>
+        <hr>
+        <header>
+            <h1>Computadoras, hardware y software</h1>
+        </header>
+        <div class="multicolumna">
+            <h3>¿Qu&eacute; es una computadora?</h3>
+            <img class="flotante" src="computadora.jpg" alt="computadora">
             <p>Una computadora es un dispositivo que puede realizar c&aacute;lculos y tomar decisiones 
                 l&oacute;gicas con mucha m&aacute;s rapidez que los humanos. Muchas de las computadoras 
                 personales de la actualidad pueden realizar miles de millones de c&aacute;lculos en un 
@@ -54,6 +66,7 @@
                 instrucciones por segundo puede realizar en un segundo m&aacute;s de 100,000 c&aacute;lculos 
                 para cada persona en el planeta. Y&mdash;estos "l&iacute;mites superiores" aumentan con rapidez.
             </p>
+            <h3>Software</h3>
             <p>Las computadoras procesan datos bajo el control de conjuntos de instrucciones llamadas programas 
                 de computadora. Estos programas gu&iacute;an a la computadora por conjuntos ordenados de 
                 acciones especificadas por personas llamadas programadores de computadora. Los programas que se 
@@ -62,6 +75,7 @@
                 del programador, con lo cual se reducen los costos de desarrollo de software&mdash;programaci&oacute;n 
                 orientada a objetos.
             </p>
+            <h3>Hardware</h3>
             <p>Una computadora consiste de diversos dispositivos conocidos como hardware (por ejemplo: el 
                 teclado, pantalla, rat&oacute;n, discos duros, memoria, DVD y unidades de procesamiento). Los 
                 costos de las computadoras disminuyen en forma dram&aacute;tica, debido a los r&aacute;pidos 
@@ -82,6 +96,7 @@
                 microprocesadores que se producen ca a&ntilde;o se incrustan en dispositivos que no son 
                 computadoras de prop&oacute;sito general.
             </p>
+            <p><em>Autor: Deitel & Associates, Inc.</em></p>
             <footer>
                 <em>&copy; 2012 por Pearson Education, Inc. Todos los derechos reservados.</em>
             </footer>
