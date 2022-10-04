@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 6.17 Secuencia de comandos mayor que-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 6.17</title>
+    </head>
+    <body>
+        <h2>6.17 Escriba una secuencia de comandos que pida al usuario que introduzca dos enteros, obtenga 
+            los n&uacute;meros del usuario y produzca texto que muestre el n&uacute;mero m&aacute;s grande 
+            seguido de las palabras "es mayor que" en un di&aacute;logo de alerta. Si los n&uacute;meros son 
+            iguales, imprima texto de HTML5 que muestre el mensaje "Estos n&uacute;meros son iguales". Use las 
+            t&eacute;cnicas mostradas en la figura 6.14.
+        </h2>
+        <hr>
+        <p><strong>&lt;script&gt;</strong></p>
+        <p style="text-indent: 2em;"><strong>var primerNumero;</strong></p>
+        <p style="text-indent: 2em;"><strong>var segundoNumero;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numero1;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numero2;</strong></p>
+        <p style="text-indent: 2em;"><strong>var suma;</strong></p>
+        <p style="text-indent: 2em;"><strong>var producto;</strong></p>
+        <p style="text-indent: 2em;"><strong>var diferencia;</strong></p>
+        <p style="text-indent: 2em;"><strong>var cociente;</strong></p>
+        <p style="text-indent: 2em;"><strong>primerNumero = window.prompt("Escriba el primer entero");</strong></p>
+        <p style="text-indent: 2em;"><strong>segundoNumero = window.prompt("Escriba el segundo entero");</strong></p>
+        <p style="text-indent: 2em;"><strong>numero1 = parseInt(primerNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero2 = parseInt(segundoNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 == numero2){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("Estos números son iguales");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 > numero2){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert( numero1 "es mayor que " + numero2);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 < numero2){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert( numero2 "es mayor que " + numero1);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

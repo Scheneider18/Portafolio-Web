@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 6.18 Secuencia de comandos suma, promedio, producto menor y mayor. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 6.18</title>
+    </head>
+    <body>
+        <h2>6.18 Escriba una secuencia de comandos que reciba tres enteros del usuario y muestre la suma, 
+            promedio, producto, menor y mayor de los n&uacute;meros en un di&aacute;logo alert.
+        </h2>
+        <hr>
+        <p><strong>&lt;script&gt;</strong></p>
+        <p style="text-indent: 2em;"><strong>var primerNumero;</strong></p>
+        <p style="text-indent: 2em;"><strong>var segundoNumero;</strong></p>
+        <p style="text-indent: 2em;"><strong>var tercerNumero;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numero1;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numero2;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numero3;</strong></p>
+        <p style="text-indent: 2em;"><strong>var suma;</strong></p>
+        <p style="text-indent: 2em;"><strong>var promedio;</strong></p>
+        <p style="text-indent: 2em;"><strong>var producto;</strong></p>
+        <p style="text-indent: 2em;"><strong>primerNumero = window.prompt("Escriba el primer entero");</strong></p>
+        <p style="text-indent: 2em;"><strong>segundoNumero = window.prompt("Escriba el segundo entero");</strong></p>
+        <p style="text-indent: 2em;"><strong>tercerNumero = window.prompt("Escriba el tercer entero");</strong></p>
+        <p style="text-indent: 2em;"><strong>numero1 = parseInt(primerNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero2 = parseInt(segundoNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero3 = parseInt(tercerNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 > numero2 && numero1 > numero3){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert("El numero mayor es: " + numero1);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 < numero2 && numero1 < numero3){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert("El numero menor es: " + numero1);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero2 > numero1 && numero2 > numero3){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert("El numero mayor es: " + numero2);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero2 < numero1 && numero2 < numero3){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert("El numero menor es: " + numero2);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero3 > numero2 && numero3 > numero1){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert("El numero mayor es: " + numero3);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero3 < numero2 && numero3 < numero1){</strong></p>
+        <p style="text-indent: 3em;"><strong>window.alert("El numero menor es: " + numero3);</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>suma = numero1 + numero2 + numero3;</strong></p>
+        <p style="text-indent: 2em;"><strong>window.alert("La suma de los enteros es: " + suma);</strong></p>
+        <p style="text-indent: 2em;"><strong>promedio = suma / 3;</strong></p>
+        <p style="text-indent: 2em;"><strong>window.alert("El promedio de los enteros es: " + promedio);</strong></p>
+        <p style="text-indent: 2em;"><strong>producto = numero1 * numero2 * numero3;</strong></p>
+        <p style="text-indent: 2em;"><strong>window.alert("El producto de los enteros es: " + producto);</strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 6.19 Secuencia de comandos círculo. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 6.19</title>
+    </head>
+    <body>
+        <h2>6.19 Escriba una secuencia de comandos que obtenga del usuario el radio de un c&iacute;rculo 
+            y produzca texto HTML5 que muestre el di&aacute;metro, la circunferencia y el &aacute;rea de ese 
+            c&iacute;rculo. Use el valor constante 3.14159 para &pi;. Use las t&eacute;cnicas de GUI que se 
+            muestran en la figura 6.7. Use las siguientes f&oacute;rmulas (r es el radio): diametro = 2r, 
+            circunferencia = 2&pi;r, &aacute;rea = &pi;r<sup>2</sup>.
+        </h2>
+        <hr>
+        <p><strong>&lt;script&gt;</strong></p>
+        <p style="text-indent: 2em;"><strong>var radioUser;</strong></p>
+        <p style="text-indent: 2em;"><strong>var radio;</strong></p>
+        <p style="text-indent: 2em;"><strong>var diametro;</strong></p>
+        <p style="text-indent: 2em;"><strong>var circunferencia;</strong></p>
+        <p style="text-indent: 2em;"><strong>var area;</strong></p>
+        <p style="text-indent: 2em;"><strong>var pi;</strong></p>
+        <p style="text-indent: 2em;"><strong>pi = 3.14159;</strong></p>
+        <p style="text-indent: 2em;"><strong>radioUser = window.prompt("Escriba el radio del círculo: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>radio = parseFloat(radioUser);</strong></p>
+        <p style="text-indent: 2em;"><strong>diametro = 2 * radio;</strong></p>
+        <p style="text-indent: 2em;"><strong>document.writeln("El diametro del circulo es: " + diametro);</strong></p>
+        <p style="text-indent: 2em;"><strong>circunferencia = 2 * pi * radio;</strong></p>
+        <p style="text-indent: 2em;"><strong>document.writeln("EL circunferencia es: " + circunferencia);</strong></p>
+        <p style="text-indent: 2em;"><strong>area = pi * (radio * radio);</strong></p>
+        <p style="text-indent: 2em;"><strong>document.writeln("El área es: " + area);</strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>
