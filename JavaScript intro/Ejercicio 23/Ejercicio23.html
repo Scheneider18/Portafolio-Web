@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 6.23 Secuencia de comandos conteo números negativos, positivos y cero. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 6.23</title>
+        <script type="text/javascript">
+            var primerNumero, segundoNumero, tercerNumero, numero1, numero2, numero3, neg, pos, cero;
+            primerNumero = window.prompt("Escriba el primer entero: ");
+            segundoNumero = window.prompt("Escriba el segundo entero: ");
+            tercerNumero = window.prompt("Escriba el tercer entero: ");
+            numero1 = parseInt(primerNumero);
+            numero2 = parseInt(segundoNumero);
+            numero3 = parseInt(tercerNumero);
+            neg = 0;
+            pos = 0;
+            cero = 0;
+            if(numero1 == 0){
+                cero = cero + 1;
+            }
+            if(numero1 < 0){
+                neg = neg + 1;
+            }
+            if(numero1 > 0){
+                pos = pos + 1;
+            }
+            if(numero2 == 0){
+                cero = cero + 1;
+            }
+            if(numero2 < 0){
+                neg = neg + 1;
+            }
+            if(numero2 > 0){
+                pos = pos + 1;
+            }
+            if(numero3 == 0){
+                cero = cero + 1;
+            }
+            if(numero3 < 0){
+                neg = neg + 1;
+            }
+            if(numero3 > 0){
+                pos = pos + 1;
+            }
+            document.writeln("<h1>El total de numeros negativos introducidos son :" + neg + "</h1>");
+            document.writeln("<h1>El total de numeros positivos introducidos son :" + pos + "</h1>");
+            document.writeln("<h1>El total de numeros cero introducidos son :" + cero + "</h1>");
+        </script>
+    </head>
+    <body>
+        <h2>6.23 Escriba una secuencia de comandos que reciba tres n&uacute;meros, determine y produzca 
+            marcado que muestre la cantidad de n&uacute;meros negativos, positivos y ceros introducidos.
+        </h2>
+        <hr>
+        <p><strong>&lt;script&gt;</strong></p>
+        <p style="text-indent: 2em;"><strong>var primerNumero, segundoNumero, tercerNumero, numero1, numero2, numero3, neg, pos, cero;</strong></p>
+        <p style="text-indent: 2em;"><strong>primerNumero = window.prompt("Escriba el primer entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>segundoNumero = window.prompt("Escriba el segundo entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>tercerNumero = window.prompt("Escriba el tercer entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>numero1 = parseInt(primerNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero2 = parseInt(segundoNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero3 = parseInt(tercerNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>neg = 0;</strong></p>
+        <p style="text-indent: 2em;"><strong>pos = 0;</strong></p>
+        <p style="text-indent: 2em;"><strong>cero = 0;</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 == 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>cero = cero + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 < 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>neg = neg + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 > 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>pos = pos + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero2 == 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>cero = cero + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero2 < 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>neg = neg + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero2 > 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>pos = pos + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero3 == 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>cero = cero + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero3 < 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>neg = neg + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero3 > 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>pos = pos + 1;</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>document.writeln("&lt;h1&gt;El total de numeros negativos introducidos son :" + neg + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>document.writeln("&lt;h1&gt;El total de numeros positivos introducidos son :" + pos + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>document.writeln("&lt;h1&gt;El total de numeros ceros introducidos son :" + cero + "&lt;/h1&gt;");</strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

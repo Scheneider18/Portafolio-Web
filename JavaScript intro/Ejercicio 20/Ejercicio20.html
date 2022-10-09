@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 
 <!-- Ejercicios de autoevaluación -->
-<!-- 6.20 -->
+<!-- 6.20 Secuencia de comandos de mayor a menor. -->
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 6.20</title>
+    </head>
+    <body>
+        <h2>6.20 Escriba una secuencia de comandos que lea cinco enteros, determine y produzca marcado que 
+            muestre los enteros menor y mayor en el grupo. Use s&oacute;lo las t&eacute;cnicas de secuencia de 
+            comandos que aprendi&oacute; en este cap&iacute;tulo.
+        </h2>
+        <hr>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="text-indent: 2em;"><strong>var primerNumero, segundoNumero, tercerNumero, cuartoNumero, quintoNumero;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numero1, numero2, numero3, numero4, numero5;</strong></p>
+        <p style="text-indent: 2em;"><strong>primerNumero = window.prompt("Escriba el primer entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>segundoNumero = window.prompt("Escriba el segundo entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>tercerNumero = window.prompt("Escriba el tercer entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>cuartoNumero = window.prompt("Escriba el cuarto entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>quintoNumero = window.prompt("Escriba el quinto entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>numero1 = parseInt(primerNumero)</strong></p>
+        <p style="text-indent: 2em;"><strong>numero2 = parseInt(segundoNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero3 = parseInt(tercerNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero4 = parseInt(cuartoNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>numero5 = parseInt(quintoNumero);</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero1 > numero2 && numero1 > numero3 && numero1 > numero4 && numero1 > numero5){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero mayor es: " + numero1 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}else{</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero menor es: " + numero1 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero2 > numero1 && numero2 > numero3 && numero2 > numero4 && numero2 > numero5){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero mayor es: " + numero2 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}else{</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero menor es: " + numero2 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero3 > numero1 && numero3 > numero2 && numero3 > numero4 && numero3 > numero5){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero mayor es: " + numero3 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}else{</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero menor es: " + numero3 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero4 > numero1 && numero4 > numero2 && numero4 > numero3 && numero4 > numero5){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero mayor es: " + numero4 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}else{</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero menor es: " + numero4 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p style="text-indent: 2em;"><strong>if(numero5 > numero1 && numero5 > numero2 && numero5 > numero3 && numero5 > numero4){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero mayor es: " + numero5 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}else{</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero menor es: " + numero5 + "&lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
 </html>

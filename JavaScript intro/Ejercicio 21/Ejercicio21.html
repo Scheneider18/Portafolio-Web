@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 6.21 Secuencia de comandos Par o impar. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 6.21</title>
+        <script type="text/javascript">
+            var numeroEntero, numero1;
+            numeroEntero = window.prompt("Escriba el primer entero: ");
+            numero1 = parseInt(numeroEntero);
+            if (numero1 % 2 == 0){
+                document.writeln("<h1>El numero " + numero1 + "es par</h1>");
+            }else{
+                document.writeln("<h1>El numero " + numero2 + "es impar</h1>");
+            }
+        </script>
+    </head>
+    <body>
+        <h2>6.21 Escriba una secuencia de comandos que lea un entero, determine y produzca texto de HTML5 
+            que muestre si es par o impar. [Sugerencia: use el operador residuo.]
+        </h2>
+        <hr>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="text-indent: 2em;"><strong>var numeroEntero, numero1;</strong></p>
+        <p style="text-indent: 2em;"><strong>numeroEntero = window.prompt("Escriba un entero: ");</strong></p>
+        <p style="text-indent: 2em;"><strong>numero1 = parseInt(numeroEntero);</strong></p>
+        <p style="text-indent: 2em;"><strong>if (numero1 % 2 == 0){</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero " + numero1 + "es par &lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}else{</strong></p>
+        <p style="text-indent: 3em;"><strong>document.writeln("&lt;h1&gt; El numero " + numero2 + "es impar &lt;/h1&gt;");</strong></p>
+        <p style="text-indent: 2em;"><strong>}</strong></p>
+    </body>
+</html>
