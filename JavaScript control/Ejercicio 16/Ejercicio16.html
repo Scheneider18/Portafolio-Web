@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.16 Tabla de valores. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.16</title>
+        <style>
+            table{
+                text-align: center;
+            }
+        </style>
+        <script>
+            document.writeln("<h2>7.16 Escriba una secuencia de comandos que utilice ciclos para imprimir la siguiente tabla "+
+            "de valores. Muestre los resultados en una tabla de HTML5. Use CSS para centrar los datos en "+
+            "cada columna."+
+            "</h2>");
+            document.writeln("<img src="+"tablavalores.png"+" alt="+"Tabla de valores"+">");
+            document.writeln("<hr>");
+            var numero, ndiez, ncien, nmil;
+            numero = 1;
+            document.write("<table border = "+ 1 +">");
+            document.write("<thead><th>N</th><th>10*N</th><th>100*N</th><th>1000*N</th></thead>");
+            while(numero <= 6){
+                ndiez = 10 * numero;
+                ncien = 100 * numero;
+                nmil = 1000 * numero;
+                document.write("<tr><td>"+numero+"</td><td>"+ndiez+"</td><td>"+ncien+"</td><td>"+nmil+"</td></tr>");
+                numero++;
+            }
+            document.write("</table>");
+        </script>
+    </head>
+    <body>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var numero, ndiez, ncien, nmil; <br>
+            numero = 1; <br>
+            document.write("&lt;table border = "+ 1 +"&gt;"); <br>
+            document.write("&lt;thead>&lt;th>N&lt;/th>&lt;th>10*N&lt;/th>&lt;th>100*N&lt;/th>&lt;th>1000*N&lt;/th>&lt;/thead>"); <br>
+            while(numero <= 6){ <br>
+                ndiez = 10 * numero; <br>
+                ncien = 100 * numero; <br>
+                nmil = 1000 * numero; <br>
+                document.write("&lt;tr>&lt;td>"+numero+"&lt;/td>&lt;td>"+ndiez+"&lt;/td>&lt;td>"+ncien+"&lt;/td>&lt;td>"+nmil+"&lt;/td>&lt;/tr>"); <br>
+                numero++; <br>
+            } <br>
+            document.write("&lt;/table>");
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

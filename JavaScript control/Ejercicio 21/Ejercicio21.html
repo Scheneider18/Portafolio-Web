@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.21 Multiplos infinitos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.21</title>
+    </head>
+    <body>
+        <h2>7.21</h2>
+        <p>Escriba una secuencia de comandos que produzca texto de HTML5 que siga mostrando en la ventana de 
+            comandos los m&uacute;ltiplos del entero 2 (a saber, 2, 4, 8, 16, 32, 64, etc&eacute;tera). Su ciclo 
+            no debe terminar (es decir, debe crear un ciclo infinito). ¿Qu&eacute; ocurre cuando ejecuta este 
+            programa?
+        </p>
+        <hr>
+        <p><strong>Respuesta: La ventana se satura al no tener un fin el ciclo provocando un fallo y 
+            cerrandose.
+        </strong></p>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var multiplo=2; <br>
+            while(multiplo>1){ <br>
+                document.writeln("&lt;p&gt;El multiplo es:"+multiplo+"&lt;/p&gt;")
+                multiplo = multiplo*2;
+            } 
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

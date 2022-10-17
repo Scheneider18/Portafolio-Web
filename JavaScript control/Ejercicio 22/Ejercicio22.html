@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.22 Cifrado. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.22</title>
+        <script>
+            document.writeln("<h2>7.22</h2>");
+            document.writeln("<p>7.22 Una compañía desea transmitir datos por teléfono, pero le preocupa que sus teléfonos puedan "+
+            "estar intervenidos. Todos sus datos se transmiten como enteros de cuatro dígitos. La compañía le "+
+            "ha pedido a usted que escriba una secuencia de comandos que cifre sus datos, de modo que puedan "+
+            "transmitirse en forma más segura. Su secuencia de comandos debe leer un entero de cuatro digitos "+
+            "introducido por el usuario en un diálogo prompt y cifrarlo de la siguiente manera: reemplace cada "+
+            "dígito con (la suma de ese dígito más 7) módulo 10. Después intercambie el primer dígito con el "+
+            "tercero, e intercambie el segundo dígito con el cuarto. Luego produzca texto de HTML5 que muestre "+
+            "el entero cifrado."+
+            "</p>");
+            document.writeln("<hr>");
+            var num=prompt("Número a cifrar: ");
+            while(num.length<4){
+                num=prompt("Número a cifrar: ");
+            }
+            var cifrado='';
+            var cifrado1='';
+            for(let i=0;i<num.length;i++){
+                cifrado=cifrado+""+(Number(num[i])+7);
+            }
+            for(let i=0;i<cifrado.length;i++){
+                switch (i) {
+                    case 0:
+                        cifrado1=cifrado[2];
+                        break;
+                    case 1:
+                        cifrado1=cifrado1+cifrado[3];
+                        break;
+                    case 2:
+                        cifrado1=cifrado1+cifrado[0];
+                        break;
+                    case 3:
+                        cifrado1=cifrado1+cifrado[1];
+                        break;
+                
+                    default:cifrado1=cifrado1+cifrado[i];
+                        break;
+                }
+            }     
+            document.writeln("<h3>Numero cifrado:"+cifrado1+"</h3>");
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

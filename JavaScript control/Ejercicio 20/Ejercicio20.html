@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.20 Palíndromos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.20</title>
+        <script>
+            document.writeln("<h2>7.20</h2>");
+            document.writeln("<p>7.20 Un palíndromo es un número o una frase de texto que se lee igual al derecho "+ 
+            "y al revés. Por ejemplo, cada uno de los siguientes enteros de cinco dígitos es un palíndromo: 12321,"+ 
+            " 55555, 45554 y 11611. Escriba una secuencia de comandos que lea un entero de cinco dígitos y determine"+ 
+            " si es un palíndromo. Si el número no es de cinco dígitos, muestre un diálogo alert que indique el" +
+            " problema al usuario y le permita introducir un nuevo valor después de cerrar el diálogo alert.</p>");
+            document.writeln("<hr>");
+            var a;
+            a = window.prompt("Digite el numero");
+            while(a.length>5){
+                window.alert("Numero mayor a 5 digitos");
+                a=prompt("Digite el numero de nuevo");
+            }
+            if(a[0]==a[4]&&a[1]==a[3]){
+                document.writeln("< p>Es palindromo< /p>");
+            }else{
+                document.writeln("< p>No es palindromo< /p>")
+            }
+        </script>
+    </head>
+    <body>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var a; <br>
+            a = window.prompt("Digite el numero"); <br>
+            while(a.length>5){ <br>
+                window.alert("Numero mayor a 5 digitos"); <br>
+                a=prompt("Digite el numero de nuevo"); <br>
+            } <br>
+            if(a[0]==a[4]&&a[1]==a[3]){ <br>
+                document.writeln("< p>Es palindromo< /p>"); <br>
+            }else{ <br>
+                document.writeln("< p>No es palindromo< /p>") <br>
+            }
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

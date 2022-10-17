@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.15 Secuencia de comandos numero mayor. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.15</title>
+        <script>
+            document.writeln("<h2>7.15</h2>");
+            document.writeln("<p>El proceso de encontrar el valor m&aacute;s grande (es decir, el m&aacute;ximo de un grupo) se "+
+            "utiliza con frecuencia en aplicaciones de computadora. Por ejemplo, una secuencia de datos para "+
+            "determinar el ganador de un concurso de ventas recibe como entrada el n&uacute;mero de unidades "+
+            "vendidas por cada vendedor. El que haya vendido m&aacute;s unidades es el que gana el concurso. "+
+            "Escriba un algoritmo en pseudoc&oacute;digo y despu&eacute;s una secuencia de comandos que reciba "+
+            "como entrada una serie de 10 n&uacute;meros de un solo d&iacute;gito como caracteres, determine "+
+            "el mayor de los n&uacute;meros y produzca un mensaje que muestre el n&uacute;mero m&aacute;s "+
+            "grande. Su secuencia de comandos debe utilizar las siguientes tres variables: <br> "+
+            "a) contador: un contador para contar hasta 10 (es decir, para llevar el registro de cu&aacute;ntos "+
+            "n&uacute;meros se han introducido, y para determinar que se hayan procesado los 10 n&uacute;meros). <br>"+
+            "b) numero: el entero m&aacute;s reciente introducido por el usuario. <br>"+
+            "c) mayor: el n&uacute;mero m&aacute;s grande encontrado hasta ahora."+
+            "</p>");
+            document.writeln("<hr>");
+            //Código
+            var contador, numero, num, mayor;
+            contador = 1;
+            numero = window.prompt("Ingresa un número entero de un solo dígito:", "0");
+            num = parseInt(numero);
+            mayor = num;
+            contador++;
+            while(contador <= 10){
+                numero = window.prompt("Ingresa un número entero de un solo dígito:", "0");
+                num = parseInt(numero);
+                if(num > mayor){
+                    mayor = num;
+                }
+                contador++;
+            }
+            document.writeln("<h3>El n&uacute;mero m&aacute;s grande es: "+ mayor +"</h3>");
+        </script>
+    </head>
+    <body>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var contador, numero, num, mayor; <br>
+            contador = 1; <br>
+            numero = window.prompt("Ingresa un número entero de un solo dígito:", "0"); <br>
+            num = parseInt(numero);<br>
+            mayor = num;<br>
+            contador++;<br>
+            while(contador <= 10){ <br>
+                numero = window.prompt("Ingresa un número entero de un solo dígito:", "0"); <br>
+                num = parseInt(numero); <br>
+                if(num > mayor){ <br>
+                    mayor = num; <br>
+                } <br>
+                contador++; <br>
+            } <br>
+            document.writeln("&lt;h3&gt;El n&uacute;mero m&aacute;s grande es: "+ mayor +"&lt;/h3&gt;");
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

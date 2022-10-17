@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.12 Secuencia de comandos tienda de departamentos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.12</title>
+        <script type="text/javascript">
+            document.writeln("<h2>7.12</h2>");
+            document.writeln("<p>Desarrolle una secuencia de comandos que determine si alguno de los clientes de una tienda de " +
+            "departamentos se ha excedido del l&iacute;mite de cr&eacute;dito en una cuenta. Para cada cliente "+ 
+            "se tienen los siguientes datos: <br>"+
+            "a) El n&uacute;mero de cuenta. <br>"+
+            "b) El saldo al inicio del mes. <br>" +
+            "c) El total de todos los art&iacute;culos cargados por el cliente en el mes. <br>" +
+            "d) El total de todos los cr&eacute;ditos aplicados a la cuenta del cliente en el mes. <br>"+
+            "e) El l&iacute;mite de cr&eacute;dito permitido. <br>"+
+            "La secuencia de comandos debe recibir como entrada cada uno de estos datos desde un di&aacute;logo "+
+            "prompt como entero, debe calcular el nuevo saldo (= saldo inicial + cargos - cr&eacute;ditos), "+
+            "mostrar el nuevo balance, determinar si &eacute;ste excede el l&iacute;mite de cr&eacute;dito del "+
+            "cliente. Para los clientes que cuyo l&iacute;mite de cr&eacute;dito sea excedido, la secuencia de "+
+            "comandos debe producir texto de HTML5 que muestre el mensaje " + "Se excedi&oacute; el l&iacute;mite de "+
+            "su credito" + "."+
+        "</p>");
+            document.writeln("<hr>");
+            //Código
+            var nomcu, salini, ini, cargados, car, credito, cred, limite, lim, balance, permitido;
+            nomcu = window.prompt("Ingrese el número de cuenta:");
+            salini = window.prompt("Ingrese el saldo inicial en enteros:", "0");
+            cargados = window.prompt("Ingrese el total de articulos cargados en enteros:","0");
+            credito = window.prompt("Ingrese el total de creditos aplicados en enteros:","0");
+            limite = window.prompt("Ingrese el límite de crédito permitido en entero:","0");
+            ini = parseInt(salini);
+            car = parseInt(cargados);
+            cred = parseInt(credito);
+            lim = parseInt(limite);
+            balance = ini + car - cred;
+            document.writeln("<h2>Nuevo balance de: "+ balance +"</h2>")
+            if(balance > lim){
+                document.writeln("<p><strong>Se excedi&oacute; el l&iacute;mite de su cr&eacute;dito.</strong></p>")
+            }
+        </script>
+    </head>
+    <body>
+        <p><strong>Pseudoc&oacute;digo:</strong></p>
+        <p><strong><em>
+            Ingresar datos solicitados <br>
+            Convertir en enteros <br>
+            Calcular el nuevo balance <br>
+            Imprimir nuevo balance <br>
+            Comparar si el nuevo balance es mayor al cr&eacute;dito <br>
+            Si es cierto imprimir texto diciendo <br>
+            En caso contrario no hacer nada
+        </em></strong></p>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var nomcu, salini, ini, cargados, car, credito, cred, limite, lim, balance, permitido; <br>
+            nomcu = window.prompt("Ingrese el número de cuenta:"); <br>
+            salini = window.prompt("Ingrese el saldo inicial en enteros:", "0"); <br>
+            cargados = window.prompt("Ingrese el total de articulos cargados en enteros:","0"); <br>
+            credito = window.prompt("Ingrese el total de creditos aplicados en enteros:","0"); <br>
+            limite = window.prompt("Ingrese el límite de crédito permitido en entero:","0"); <br>
+            ini = parseInt(salini); <br>
+            car = parseInt(cargados);<br>
+            cred = parseInt(credito); <br>
+            lim = parseInt(limite); <br>
+            balance = ini + car - cred; <br>
+            document.writeln("&lt;h2&gt;Nuevo balance de: "+ balance +"&lt;/h2&gt;") <br>
+            if(balance > lim){ <br>
+                document.writeln("&lt;p&gt;&lt;strong&gt;Se excedi&oacute; el l&iacute;mite de su cr&eacute;dito.&lt;/strong&gt;&lt;/p&gt;") <br>
+            }
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.14 Secuencia de comando Salario bruto por horas. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.14</title>
+        <script type="text/javascript">
+            document.writeln("<h2>7.14</h2>");
+            document.writeln("<p>Desarrolle una secuencia de comandos que determine el sueldo bruto para cada uno de tres empleados. "+
+            "La empresa paga la "+"cuota normal " + "en las primeras 40 horas de trabajo de cada empleado, y paga "+
+            "cuota y media " + "en todas las horas trabajadas que excedan de 40. Usted recibe una lista de los "+
+            "empleados de la empresa, el n&uacute;mero de horas que trabaj&oacute; cada uno la semana pasada "+
+            "y la tarifa por horas de cada empleado. Su programa debe recibir como entrada esta "+
+            "informaci&oacute;n para cada empleado, determinar el sueldo bruto de cada uno y producir texto "+
+            "de HTML5 que muestre ese sueldo bruto. Utilice di&aacute;logos prompt para introducir los datos."+
+            "</p>");
+            document.writeln("<hr>");
+            var hora, hr, hrex, cuota, sal, sueldo;
+            hora = window.prompt("Ingrese las horas trabajadas del empleado:","0");
+            hr = parseInt(hora);
+            cuota = window.prompt("Ingrese la cuota normal del empleado:","0");
+            sal = parseInt(cuota);
+            if(hr > 40){
+                hrex = hr - 40;
+                sueldo = 40 * sal;
+                sueldo += (hrex * (sal * 1.5));
+            }else{
+                sueldo = hr * sal;
+            }
+            document.writeln("<h3>El sueldo bruto del empleado es de: " + sueldo +"</h3>");
+        </script>
+    </head>
+    <body>
+        <p><strong>Pseudoc&oacute;digo:</strong></p>
+        <p><strong><em>
+            Solicitar los datos del empleados <br>
+            Convertir de cadena a entero <br>
+            Si el n&uacute;mero de horas es mayor a 40 <br>
+            Multiplicar 40 por la cuota ingresada <br>
+            Restar 40 al n&uacute;mero total, al resultado multiplicarlo por la cuota <br>
+            Sumar ambas multiplicaciones <br>
+            Mostrar el resultado <br>
+            Caso contrario <br>
+            Multiplicar las horas por la cuota <br>
+            Mostrar el resultado
+        </em></strong></p>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var hora, hr, hrex, cuota, sal, sueldo; <br>
+            hora = window.prompt("Ingrese las horas trabajadas del empleado:","0"); <br>
+            hr = parseInt(hora); <br>
+            cuota = window.prompt("Ingrese la cuota normal del empleado:","0"); <br>
+            sal = parseInt(cuota); <br>
+            if(hr > 40){ <br>
+                hrex = hr - 40; <br>
+                sueldo = 40 * sal; <br>
+                sueldo += (hrex * (sal * 1.5)); <br>
+            }else{ <br>
+                sueldo = hr * sal; <br>
+            } <br>
+            document.writeln("&lt;h3&gt;El sueldo bruto del empleado es de: " + sueldo +"&lt;/h3&gt;");<br>
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

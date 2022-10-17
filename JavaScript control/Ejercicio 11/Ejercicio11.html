@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.11 Kilometraje. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;m: 7.11</title>
+        <script type="text/javascript">
+            document.writeln("<h2>7.11 </h2>");
+            document.writeln("<p>Los conductores se preocupan acerca del kilometraje de sus autom&oacute;viles. Un conductor ha" + 
+            "llevado el control de varios reabastecimiento de gasolina, registrando los kil&oacute;metros" + 
+            "conducidos y los litros usados en cada viaje. Desarrolle una secuencia de comandos que reciba como" +
+            "entrada los kilometros conducidos y los litros usados por cada viaje. La secuencia de comandos debe"+
+            "calcular y producir texto HTML5 que muestre el n&uacute;mero de kil&oacute;metros por litro obtenidos"+
+            "en cada viaje, y debe imprimir el total de kil&oacute;metros por litros obtenidos en todos los"+
+            "reabastecimiento hasta ese punto. Use di&aacute;logos prompt para obtener los datos del usuario."+"</p>");
+            document.writeln("<hr>");
+            var litros, l, kilometraje, km, lxkm, totalkm, totallt, viaje;
+            totalkm = 0;
+            totallt = 0;
+            viaje = 1;
+
+            kilometraje = window.prompt("Escriba los kilometros recorridos del viaje (enteros), escriba -1 para salir: ", "0");
+            km = parseInt(kilometraje);
+
+            while(km != -1){
+                totalkm += km;
+                litros = window.prompt("Escriba los litros consumidos del viaje (enteros):","0");
+                l = parseInt(litros)
+                lxkm = km / l;
+                totallt += l;
+                document.writeln("<p>En el viaje "+ viaje + " se obtuvo "+ lxkm +" kilometros recorridos por cada litro. </p>")
+                viaje++;
+                kilometraje = window.prompt("Escriba los kilometros recorridos del viaje (enteros), escriba -1 para salir: ", "0");
+                km = parseInt(kilometraje);
+            }
+            lxkm = totalkm / totallt;
+            document.writeln("<p>El total de kilometros recorridos por litro es "+ lxkm +"</p>")
+        </script>
+    </head>
+    <body>
+        <p><strong>Pseudoc&oacute;digo:</strong></p>
+        <p><strong><em>Ingresar dato de km recorridos <br>
+        Verificar dato de entrada <br>
+        Entrar al bucle <br>
+        Solicitar litros <br>
+        Convertir a enteros <br>
+        Realizar la operaci&oacute;n <br>
+        Imprimir datos en HTML5 <br>
+        Volver a solicitar datos <br> 
+        Salir del bucle <br>
+        Realizar la operaci&oacute;n total
+        Imprimir total en HTML5</em></strong></p>
+        <p><strong>C&oacute;digo JavaScript:</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>var litros, l, kilometraje, km, lxkm, totalkm, totallt, viaje; <br>
+            totalkm = 0;<br>
+            totallt = 0;<br>
+            viaje = 1;<br>
+
+            kilometraje = window.prompt("Escriba los kilometros recorridos del viaje (enteros), escriba -1 para salir: ", "0");<br>
+            km = parseInt(kilometraje);<br>
+
+            while(km != -1){<br>
+                totalkm += km;<br>
+                litros = window.prompt("Escriba los litros consumidos del viaje (enteros):","0");<br>
+                l = parseInt(litros) <br>
+                lxkm = km / l;<br>
+                totallt += l;<br>
+                document.writeln("&lt;p&gt;En el viaje "+ viaje + " se obtuvo "+ lxkm +" kilometros recorridos por cada litro. &lt;/p&gt;") <br>
+                viaje++;<br>
+                kilometraje = window.prompt("Escriba los kilometros recorridos del viaje (enteros), escriba -1 para salir: ", "0");<br>
+                km = parseInt(kilometraje);<br>
+            } <br>
+            lxkm = totalkm / totallt;<br>
+            document.writeln("&lt;p&gt;El total de kilometros recorridos por litro es "+ lxkm +"&lt;/p&gt;")</strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

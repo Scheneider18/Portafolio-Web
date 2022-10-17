@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.14 Dos valores más grandes. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.17</title>
+        <script>
+            document.writeln("<h2>7.17 Utilizando una metodolog&iacute;a similar a la del ejercicio 7.15, encuentre los dos "+
+            "valores m&aacute;s grandes de los 10 que se introdujeron. [Nota: pueden introducir cada "+
+            "n&uacute;mero s&oacute;lo una vez]."+
+            "</h2>");
+            document.writeln("<hr>");
+            //Código
+            var contador, numero, num, mayor1, mayor2;
+            contador = 1;
+            numero = window.prompt("Ingresa un número entero de un solo dígito:", "0");
+            num = parseInt(numero);
+            mayor1 = num;
+            contador++;
+            while(contador <= 10){
+                numero = window.prompt("Ingresa un número entero de un solo dígito:", "0");
+                num = parseInt(numero);
+                if(num > mayor1){
+                    mayor2 = mayor1;
+                    mayor1 = num;
+                }
+                contador++;
+            }
+            document.writeln("<h3>El n&uacute;mero m&aacute;s grande es: "+ mayor1 +", y el segundo: "+ mayor2 + "</h3>");
+        </script>
+    </head>
+    <body>
+        <p><strong>C&oacute;digo JavaScript::</strong></p>
+        <p><strong>&lt;script type="text/javascript"&gt;</strong></p>
+        <p style="padding-left: 2em;"><strong>
+            var contador, numero, num, mayor1, mayor2; <br>
+            contador = 1; <br>
+            numero = window.prompt("Ingresa un número entero de un solo dígito:", "0"); <br>
+            num = parseInt(numero);<br>
+            mayor = num;<br>
+            contador++;<br>
+            while(contador <= 10){ <br>
+                numero = window.prompt("Ingresa un número entero de un solo dígito:", "0"); <br>
+                num = parseInt(numero); <br>
+                if(num > mayor){ <br>
+                    mayor2 = mayor1; <br>
+                    mayor1 = num; <br>
+                } <br>
+                contador++; <br>
+            } <br>
+            document.writeln("&lt;h3&gt;El n&uacute;mero m&aacute;s grande es: "+ mayor1 +" y el segundo: "+ mayor2 + "&lt;/h3&gt;");
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

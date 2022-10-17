@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.23 Decifear. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.23</title>
+        <script>
+            document.writeln("<h2>7.23 Escriba una secuencia de comandos que reciba como entrada un entero cifrado de cuatro "+
+            "d&iacute;gitos (del ejercicio 7.22) y lo descifre para formar el n&uacute;mero original."+
+            "</h2>");
+            document.writeln("<hr>");
+            var num=prompt("Número a descifrar: ");
+            while(num.length<4){
+                num=prompt("Número a descifrar: ");
+            }
+            var cifrado='';
+            var cifrado1='';
+            for(let i=0;i<num.length;i++){
+                switch (i) {
+                    case 0:
+                        cifrado1=num[2];
+                        break;
+                    case 1:
+                        cifrado1=cifrado1+num[3];
+                        break;
+                    case 2:
+                        cifrado1=cifrado1+num[0];
+                        break;
+                    case 3:
+                        cifrado1=cifrado1+num[1];
+                        break;
+                
+                    default:cifrado1=cifrado1+num[i];
+                        break;
+                }
+            }
+            for(let i=0;i<cifrado1.length;i++){
+                if(cifrado1[i]==1){ 
+                cifrado=cifrado+""+(Number(cifrado1[i]+""+cifrado1[i+1])-7);
+                i++; 
+                }else{
+                    cifrado=cifrado+""+(Number(cifrado1[i])-7);
+                }
+            }
+            document.writeln("<h3>Numero cifrado: "+num+"</h3>")   
+            document.writeln("<h3>Numero decifrado: "+cifrado+"</h3>");
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

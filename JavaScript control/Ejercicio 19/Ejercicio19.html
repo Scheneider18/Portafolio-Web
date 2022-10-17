@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 7.19 Problema del else suelto. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 7.19</title>
+    </head>
+    <body>
+        <h2>7.19 (Problema del else suelto)</h2>
+        <p>Determine la salida de cada uno de los siguientes segmentos de c&oacute;digo, cuando x es 9 y 
+            y es 11, y cuando x es 11 y y es 9. Observe que el int&eacute;rpete ignora la sangr&iacute;a 
+            en una secuencia de comandos. Adem&aacute;s, el int&eacute;rpete de JavaScript siempre asocia 
+            un else con el if anterior, a menos que se le indique de otra forma mediante la colocaci&oacute;n 
+            de llaves ({}). A primera vista, tal vez no est&eacute; seguro de cu&aacute;l if corresponde a 
+            cu&aacute;l else. Esta situaci&oacute;n se conoce como el problema del "else suelto". Hemos 
+            eliminado la sangr&iacute;a del siguiente c&oacute;digo para hacer el problema m&aacute;s 
+            retador. <br>
+            a) if( x < 10 ) <br>
+               if( y > 10 ) <br>
+               document.writeln("&lt;p>*****&lt;/p>"); <br>
+               else <br>
+               document.writeln("&lt;p>#####&lt;/p>"); <br>
+               document.writeln("&lt;p>$$$$$&lt;/p>"); <br>
+            b) if( x < 10 ) <br>
+               { <br>
+                if( y > 10 ) <br>
+                document.writeln("&lt;p>*****&lt;/p>"); <br>
+               } <br>
+               else <br>
+               { <br>
+                document.writeln("&lt;p>#####&lt;/p>"); <br>
+                document.writeln("&lt;p>$$$$$&lt;/p>"); <br>
+               }
+        </p>
+        <hr>
+        <p><strong>a) Respuesta de x = 9, y = 11: *****. <br>
+            Respuesta de x = 11, y = 9: $$$$$.
+        </strong></p>
+        <p><strong>b) Respuesta de x = 9, y = 11: *****. <br>
+            Respuesta de x = 11, y = 9: #####, $$$$$.
+        </strong></p>
+    </body>
+</html>
