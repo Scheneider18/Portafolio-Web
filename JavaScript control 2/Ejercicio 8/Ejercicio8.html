@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 8.8 Modificar el programa. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 8.8</title>
+        <style type="text/css">
+            table{
+                width: 300px;
+                border-collapse: collapse;
+                background-color: lightblue;
+            }
+            table, td, th{
+                border: 1px solid black;
+                padding: 4px;
+            }
+            th{
+                text-align: left;
+                color: white;
+                background-color: darkblue;
+            }
+            tr.filaimpar{
+                background-color: white;
+            }
+        </style>
+        <script>
+            document.writeln("<h2>8.8 Modifique el programa de inter&eacute;s compuesto de la figura 8.6, "+ 
+                "repitiendo sus pasos para las tasas de inter&eacute;s del 5, 6, 7, 8, 9 y 10 por ciento."+
+                " Use una instrucci&oacute;n for para variar las tasas de intr&eacute;s. Use una tabla "+
+                "separada para cada tasa.</h2>");
+            document.writeln("<hr>");
+            var monto; // monto actual de dinero
+            var pincipal = 1000.00; // monto principal
+            var tasa = 5; // tasa de interés 
+            for ( tasa; tasa <= 10; ++tasa ){
+                document.writeln("<table>"); // comenzar tabla
+                document.writeln("<caption>C&aacute;lculo del inter&eacute;s compuesto</caption>");
+                document.writeln("<thead><tr><th>A&ntilde;o</th>"); // encabezadp de la columna año
+                document.writeln("<th>Monto de dep&oacute;sito</th>"); // encabezadp de la columna del monto
+                document.writeln("</tr></thead><tbody>");
+            
+                // imprimir una fila de la tabla para cada año
+                for ( var anio = 1; anio <= 10; ++anio ){
+                    monto = principal * Math.pow( 1.0 + tasa, anio );
+
+                    if(anio % 2 !== 0 ){
+                        document.writeln("<tr class=filaimpar'><td>" + anio + "</td><td>" + monto.toFixed(2) + 
+                            "</td></tr>");
+                    }else{
+                        document.writeln("<tr><td>" + anio + "</td><td>" + monto.toFixed(2) + "</td></tr>");
+                    }
+                } // fin de for
+
+                document.writeln("</tbody></table>");
+            }
+        </script>
+    </head>
+    <body>
+        <p><strong>C&oacute;digo de JavaScript:</strong></p>
+        <p><strong>&lt;script&gt;</strong></p>
+        <p style="margin-left: 2em;"><strong>
+            var monto; // monto actual de dinero <br>
+            var pincipal = 1000.00; // monto principal <br>
+            var tasa = 5; // tasa de interés <br>
+            for ( tasa; tasa <= 10; ++tasa ){ <br>
+                document.writeln("&lt;table>"); // comenzar tabla <br>
+                document.writeln("&lt;caption>C&aacute;lculo del inter&eacute;s compuesto&lt;/caption>"); <br>
+                document.writeln("&lt;thead>&lt;tr>&lt;th>A&ntilde;o&lt;/th>"); // encabezadp de la columna año <br>
+                document.writeln("&lt;th>Monto de dep&oacute;sito&lt;/th>"); // encabezadp de la columna del monto <br>
+                document.writeln("&lt;/tr>&lt;/thead>&lt;tbody>"); <br>
+            
+                // imprimir una fila de la tabla para cada año <br>
+                for ( var anio = 1; anio <= 10; ++anio ){ <br>
+                    monto = principal * Math.pow( 1.0 + tasa, anio ); <br>
+
+                    if(anio % 2 !== 0 ){ <br>
+                        document.writeln("&lt;tr class=filaimpar'>&lt;td>" + anio + "&lt;/td>&lt;td>" + monto.toFixed(2) + <br>
+                            "&lt;/td>&lt;/tr>"); <br>
+                    }else{ <br>
+                        document.writeln("&lt;tr>&lt;td>" + anio + "&lt;/td>&lt;td>" + monto.toFixed(2) + "&lt;/td>&lt;/tr>"); <br>
+                    } <br>
+                } // fin de for <br>
+
+                document.writeln("&lt;/tbody>&lt;/table>"); <br>
+            }
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

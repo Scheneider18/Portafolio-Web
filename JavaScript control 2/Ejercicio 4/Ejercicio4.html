@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 8.4 Errores en los enunciados. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 8.4</title>
+    </head>
+    <body>
+        <h2>8.4 Encuentre el error de cada uno de los siguientes segmentos de c&oacute;digo.</h2>
+        <hr>
+        <p>a) For ( x = 100, x >= 1, ++x) <br>
+            document.writeln( x );    
+        </p>
+        <p><strong>Los errores del segmento son las comas dentro de la condici&oacute;n, estas deben 
+            de ser punto y coma, además en la condici&oacute;n provoca un bucle infinito.
+        </strong></p>
+        <p>El siguiente c&oacute;digo debe imprimirse sin importar sin importar si el valor es par 
+            o impar: <br>
+            switch ( valor % 2 ) <br>
+            { <br>
+                case 0: <br>
+                    document.writeln("Entero par"); <br>
+                case 1: <br>
+                    document.writeln("Entero impar"); <br>
+            }
+        </p>
+        <p><strong>Los errores se encuentran en los casos, en ambos se necesita una instrucci&oacute;n 
+            break para su funcionamiento correcto.
+        </strong></p>
+        <p>El siguiente c&oacute;digo debe imprimir los enteros impares del 19 al 1: <br>
+            for ( x = 19; x >= 1; x += 2 ) <br>
+            document.writeln( x ); <br>
+        </p>
+        <p><strong>El error se encuentran en la tercera parte de la condici&oacute;n, ya que esta 
+            haciendo un incremento en ves de realizar un decremento como se menciona en la instrucci&oacute;n.
+        </strong></p>
+        <p>El siguiente c&oacute;digo debe imprimir los enteros pares del 2 al 100: <br>
+            contador = 2;
+            do { <br>
+                document.writeln( contador ); <br>
+                contador += 2; <br>
+            } while ( contador < 100 );
+        </p>
+        <p><strong>El error se encuentra en la condici&oacute;n del while, ya que no permite llegar al 
+            numero 100 por el operador utilizado.
+        </strong></p>
+    </body>
+</html>

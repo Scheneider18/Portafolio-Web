@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 8.2 Instrucciones en JavaScript. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 8.2</title>
+    </head>
+    <body>
+        <h2>8.2 Escriba una instrucci&oacute;n o un conjunto de instrucciones en JavaScript para realizar 
+            cada una de las siguientes tareas: 
+        </h2>
+        <hr>
+        <p>a) Sumar los enteros impares entre 1 y 99. Utilice una instrucci&oacute;n for. Suponga que se han 
+            han declarado las variables suma y cuenta.
+        </p>
+        <p style="margin-left: 2em;"><strong>var suma = 0; <br>
+            for(var cuenta = 1; cuenta <= 99; cuenta += 2) <br>
+            suma += cuenta;
+        </strong></p>
+        <p>b) Calcular el valor de 2.5 elevado a la potencia de 3. Use el m&eacute;todo pow.</p>
+        <p><strong>Math.pow(2.5,3);</strong></p>
+        <p>c) Imprimir los enteros del 1 al 20 mediante el uso de un ciclo while y la variable x. Suponga que 
+            la variable x se ha declarado; pero no se ha inicializado. Imprima solamente cinco enteros por 
+            l&iacute;nea.
+        </p>
+        <p style="margin-left: 2em;"><strong>x = 1; <br>
+            document.writeln("&lt;p&gt;"); <br>
+            while(x <= 20){ <br>
+            document.write(x + " "); <br>
+            if (x %  == 0){ <br>
+            document.write("&lt;/p&gt;&lt;p&gt;"); <br>
+            } <br>
+            ++x; <br>
+            }
+        </strong></p>
+        <p>d) Repita el ejercicio 8.2, (c), pero ahora use una instrucci&oacute;n for.</p>
+        <p style="margin-left: 2em;"><strong>x = 1; <br>
+            document.writeln("&lt;p&gt;"); <br>
+            for (x; x <= 20; ++x){ <br>
+            document.write(x + " "); <br>
+            if (x %  == 0){ <br>
+            document.write("&lt;/p&gt;&lt;p&gt;"); <br>
+            } <br>
+            ++x; <br>
+            }
+        </strong></p>
+    </body>
+</html>

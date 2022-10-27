@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 8.6 Secuencia de comando número menor. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 8.6</title>
+        <script>
+            document.writeln("<h2>8.6 Escriba una secuencia de comandos que encuentre el menor de varios enteros no negativos. "+
+                "Suponga que el primer valor le&iacute;do especifica el n&uacute;mero de valores que el usuario "+
+                "introducir&aacute;."+
+                "</h2>");
+            document.writeln("<hr>");
+            var cuenta, numero, num, menor, x;
+            x = 1;
+            cuenta = window.prompt("Ingrese el total de enteros a introducir:");
+            do{
+                numero = window.prompt("Ingrese el entero:");
+                num = parseInt(numero);
+                if(menor != null){
+                    if(num < menor){
+                        menor = num;
+                    }
+                }else{
+                    menor = num;
+                }
+                ++x;
+            } while ( x <= cuenta);
+            document.writeln("<h3>El menor entero no negativo introducido es: " + menor +"</h3>");
+        </script>
+    </head>
+    <body>
+        <p><strong>C&oacute;digo JavaScript:</strong></p>
+        <p><strong>&lt;script&gt;</strong></p>
+        <p style="margin-left: 2em;"><strong>
+            var cuenta, numero, num, menor, x; <br>
+            x = 1; <br>
+            cuenta = window.prompt("Ingrese el total de enteros a introducir:"); <br>
+            do{ <br>
+                numero = window.prompt("Ingrese el entero:"); <br>
+                num = parseInt(numero); <br>
+                if(menor != null){ <br>
+                    if(num < menor){ <br>
+                        menor = num; <br>
+                    } <br>
+                }else{ <br>
+                    menor = num; <br>
+                } <br>
+                ++x; <br>
+            } while ( x <= cuenta); <br>
+            document.writeln("&lt;h3>El menor entero no negativo introducido es: " + menor +"&lt;/h3>");
+        </strong></p>
+        <p><strong>&lt;/script&gt;</strong></p>
+    </body>
+</html>

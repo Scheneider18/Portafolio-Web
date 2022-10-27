@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 8.10 Canción "Los Doce Días de Navidad". -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>8.10 (Canci&oacute;n "Los Doce D&iacute;as de Navidad") Escriba  una secuencia de comandos que 
+            utilice estructuras  de repetici&oacute;n y un switch para imprimir la canci&oacute;n "Los Doce 
+            D&iacute;s de Navidad".
+        </h2>
+        <hr>
+        <script>
+            var dia;
+            window.alert("Canción 'Los Doce Días de Navidad'");
+            dia = window.prompt("¿Hasta qué estrofa desea imprimir? Del 1 al 12");
+            for(var i=0;i<=dia.length - 1;i++){ 
+                switch (dia){
+                    case '1':
+                        document.writeln("On the first day of Christmas,<br>my true love sent to me <br>A partridge in a pear tree.");
+                        break;
+                    case '2':
+                        document.writeln("On the second day of Christmas,<br>my true love sent to me <br>Two turtle doves <br>And a partridge in a pear tree.<br>");
+                        break;
+                    case '3':
+                        document.writeln("On the third day of Christmas,<br>my true love sent to me <br>Three French hens, <br>Two turtledoves <br>And a partridge in a pear tree.");
+                        break;
+                    case '4':
+                        document.writeln("On the fourth day of Christmas,<br>my true love sent to me <br>Four calling birds, <br>Three French hens, <br>Two turtle doves <br>And a partridge in a pear tree.");
+                        break;
+                    case '5':
+                        document.writeln("On the fifth day of Christmas,<br>my true love sent to me <br>Five golden rings, <br>Four calling birds, <br>Three French hens, <br>Two turtle doves <br>And a partridge in a pear tree.");
+                        break;
+                    case '6':
+                        document.writeln("On the sixth day of Christmas,<br>my true love sent to me <br>Six geese a-laying, <br>Five golden rings, <br>Four calling birds, <br>Three French hens, <br>Two turtle doves <br>And a partridge in a pear tree.");
+                        break;
+                    case '7':
+                        document.writeln("On the seventh day of Christmas,<br>my true love sent to me <br>Seven swans a-swimming,<br>Six geese a-laying,<br>Five golden rings,<br>Four calling birds,<br>Three French hens,<br>Two turtle doves <br>And a partridge in a pear tree.");
+                        break;
+                    case '8':
+                        document.writeln("On the eighth day of Christmas,<br>my true love sent to me <br>Eight maids a-milking,<br>Seven swans a-swimming,<br>Six geese a-laying,<br>Five golden rings,<br>Four calling birds,<br>Three French hens,<br>Two turtle doves <br>And a partridge in a pear tree.");
+                        break;
+                    case '9':
+                        document.writeln("On the ninth day of Christmas,<br>my true love sent to me <br>Nine ladies dancing,<br>Eight maids a-milking,<br>Seven swans a-swimming,<br>Six geese a-laying,<br>Five golden rings,<br>Four calling birds,<br>Three French hens,<br>Two turtle doves <br>And a partridge in a pear tree.");
+                        break;
+                    case '10':
+                        for (var i = 1;i<=dia.length - 1; i++) {
+                            document.writeln("On the tenth day of Christmas,<br>my true love sent to me <br>Ten lords a-leaping,<br>Nine ladies dancing,<br>Eight maids a-milking,<br>Seven swans a-swimming,<br>Six geese a-laying,<br>Five golden rings,<br>Four calling birds,<br>Three French hens,<br>Two turtle doves <br>And a partridge in a pear tree.");
+                    }
+                        break;
+                    case '11':
+                        for (var i = 1;i<=dia.length - 1; i++) {
+                            document.writeln("On the eleventh day of Christmas,<br>my true love sent to me <br>Eleven pipers piping,<br>Ten lords a-leaping,<br>Nine ladies dancing,<br>Eight maids a-milking,<br>Seven swans a-swimming,<br>Six geese a-laying,<br>Five golden rings,<br>Four calling birds,<br>Three French hens,<br>Two turtle doves <br>And a partridge in a pear tree.");
+                        }
+                        break;
+                    case '12':
+                        for (var i = 1;i<=dia.length - 1; i++) {
+                            document.writeln("On the twelfth day of Christmas,<br>my true love sent to me <br>Twelve drummers drumming,<br>Eleven pipers piping,<br>Ten lords a-leaping,<br>Nine ladies dancing,<br>Eight maids a-milking,<br>Seven swans a-swimming,<br>Six geese a-laying,<br>Five golden rings,<br>Four calling birds,<br>Three French hens,<br>Two turtle doves <br>And a partridge in a pear tree!");
+                        }
+                        break;
+                    default: document.writeln("Error");
+                }
+            }
+        </script>    
+    </body>
+</html>

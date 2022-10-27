@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.9: alcance.html -->
+<!-- Ejemplo de alcance. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo alcance</title>
+        <style>
+            p{
+                margin: 0;
+            }
+            p.espacio{
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            var salida; // almacena la cadena a mostrar
+            var x = 1; // variable global
+
+            function iniciar(){
+                var x = 5; // variable local para la función iniciar
+
+                salida = "<p>la x local en iniciar es " + x + "</p>";
+
+                funcionA(); // funcionA tiene la x local
+                funcionB(); // funcionB usa la variable global x
+                funcionA(); // funcionA reinicializa la x local
+                funcionB(); // la variable global x retiene su valor
+
+                salida += "<p class='espacio'>la x local en iniciar es " + x + "</p>";
+
+                document.getElementById("resultados").innerHTML = salida;
+            }
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
