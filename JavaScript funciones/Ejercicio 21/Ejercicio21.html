@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.21 Lanzar moneda. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.21</title>
+        <script>
+            var cara = 0, cruz = 0;
+            function iniciar(){
+                var boton = document.getElementById("lanzar");
+                boton.addEventListener("click", mostrarLanzamiento, false);
+            }
+
+            function mostrarLanzamiento(){
+                if(arrojar()){
+                    cara++;
+                    var moneda = document.getElementById("moneda");
+                    moneda.innerHTML = "CARA";
+                }else{
+                    cruz++;
+                    var moneda = document.getElementById("moneda");
+                    moneda.innerHTML = "CRUZ";
+                }
+
+                var resultados = document.getElementById("resultados");
+                resultados.innerHTML = "El numero total de cara es: " + cara +" <br>El numero total de cruz es: " + 
+                    cruz;
+            }
+
+            function arrojar(){
+                var x = Math.floor(Math.random() * 2);
+                console.log(x);
+                if(x == 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.21</h2>
+        <p>Escriba una secuencia de comandos que simule el lanzamiento de monedas. Deje que el programa lance 
+            la moneda cada vez que el usuario haga clic en el bot&oacute;n Lanzar. Cuente el n&uacute;mero de 
+            veces que aparezca cada lado de la moneda. Muestre los resultado. El programa deberá llamar a una 
+            funci&oacute;n separada de nombre arrojar, que no reciba argumentos y devuelva false para cruz y 
+            true para cara.
+        </p>
+        <hr>
+        <form action="#">
+            <label>Salio: 
+                <p id="moneda"></p>
+            </label>
+            <input type="button" value="Lanzar" id="lanzar">
+        </form>
+        <p id="resultados"></p>
+    </body>
+</html>

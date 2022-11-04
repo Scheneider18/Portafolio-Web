@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.23 Modificar programa 9.23. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.23</title>
+        <script>
+            var num1 = 0, num2 = 0;
+            
+            function iniciar(){
+                var boton = document.getElementById("verificar");
+                boton.addEventListener("click", verificar, false);
+                pregunta();
+            }
+
+            function pregunta(){
+                num1 = Math.floor(Math.random() * 9);
+                num2 = Math.floor(Math.random() * 9);
+                
+                var multiplicacion = document.getElementById("multiplicacion");
+                multiplicacion.innerHTML = "¿Cuánto es " + num1 + " por " + num2 +"?";
+            }
+
+            function verificar(){
+                var mul = num1 * num2;
+
+                var res = document.getElementById("respuesta");
+                var x = parseInt(res.value);
+
+                if( x == mul){
+                    correcta();
+                    res.value = null;
+                    num1 = 0;
+                    num2 = 0;
+                    pregunta();
+                }else{
+                    incorrecta();
+                }
+            }
+
+            function correcta(){
+                var resultado = document.getElementById("resultado");
+                var x = Math.floor(Math.random() * ( 4 - 1 + 1 ) + 1);
+                console.log(x);
+                
+                switch(x){
+                    case 1: 
+                        resultado.innerHTML = "Muy bien.";
+                        break;
+                    case 2: 
+                        resultado.innerHTML = "Excelente.";
+                        break;
+                    case 3: 
+                        resultado.innerHTML = "Buen trabajo.";
+                        break;
+                    case 4: 
+                        resultado.innerHTML = "Siga asi.";
+                        break;
+                }
+            }
+
+            function incorrecta(){
+                var resultado = document.getElementById("resultado");
+                var x = Math.floor(Math.random() * ( 4 - 1 + 1 ) + 1);
+                console.log(x);
+                
+                switch(x){
+                    case 1: 
+                        resultado.innerHTML = "No. Intente de nuevo.";
+                        break;
+                    case 2: 
+                        resultado.innerHTML = "Equivocado. Trate una vez más.";
+                        break;
+                    case 3: 
+                        resultado.innerHTML = "No se dé por vencido.";
+                        break;
+                    case 4: 
+                        resultado.innerHTML = "No. Siga intentando.";
+                        break;
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.23</h2>
+        <p>El uso de las computadoras en la educaci&oacute;n se conoce como Intrucci&oacute;n asistida por 
+            computadora (CAI). Un problema que se desarrolla en los entornos CAI es la fatiga de los estudiantes. 
+            Este problema puede eliminarse si se var&iacute;a el di&aacute;logo de la computadora para mantener 
+            la atenci&oacute;n del estudiante. Modifique el programa del ejercicio 9.22 para que imprima una 
+            variedad de contenido para cada respuesta correcta y cada respuesta incorrecta. El conjunto de 
+            respuestas correctas es el siguiente: <br>
+            Muy bien. <br>
+            Excelente. <br>
+            Buen trabajo. <br>
+            Siga asi. <br>
+            El conjunto de respuestas incorrectas es: <br>
+            No. Intente de nuevo. <br>
+            Equivocado. Trate una vez m&aacute;s. <br>
+            No se d&eacute; por vencido. <br>
+            No. Siga intentando. <br>
+            Use la generaci&oacute;n de n&uacute;meros aleatorios para elegir un n&uacute;mero del 1 al 4 que se 
+            utilice para seleccionar una respuesta apropiada a cada cuesti&oacute;n. Use una instrucci&oacute;n 
+            switch para emitir las respuestas.
+        </p>
+        <hr>
+        <p id="multiplicacion"></p>
+        <form action="#">
+            <p>
+                <label>Respuesta:
+                    <input type="number" id="respuesta">
+                </label>
+            </p>
+            <input type="button" value="Verificar" id="verificar">
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

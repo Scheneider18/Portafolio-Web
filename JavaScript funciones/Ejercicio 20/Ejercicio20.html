@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.20 puntosCalidad. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.20</title>
+        <script>
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", mostrarCalidad, false);
+            }
+
+            function mostrarCalidad(){
+                var promedio = document.getElementById("promedio");
+                var num = parseInt(promedio.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "El punto de calidad para el promedio " + num +" es: " + puntosCalidad( num );
+            }
+
+            function puntosCalidad( numero ){
+                if(numero >= 90 && numero <=100){
+                    return 4;
+                }else if(numero >= 80 && numero <=89){
+                    return 3;
+                }else if(numero >= 70 && numero <=79){
+                    return 2;
+                }else if(numero >= 60 && numero <=69){
+                    return 1;
+                }else{
+                    return 0;
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.20</h2>
+        <p>Escriba una funci&oacute;n llamda puntosCalidad que reciba el promedio de un estudiante y devuelva 
+            4 si el promedio es de 90 a 100, 3 si es de 80 a 89, 2 si es de 70 a 79, 1 si es de 60 a 69 y 0 si es 
+            menor a 60. Incorpore la funci&oacute;n en una secuencia de comandos que lea un valor del usuario.
+        </p>
+        <hr>
+        <form action="#">
+            <p>
+                <label>Promedio: 
+                    <input type="number" id="promedio">
+                </label>
+                <input type="button" value="Calcular" id="botonCalcular">
+            </p>
+        </form>
+        <p id="resultado"><strong></strong></p>
+    </body>
+</html>

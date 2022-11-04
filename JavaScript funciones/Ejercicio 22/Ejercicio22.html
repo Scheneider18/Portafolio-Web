@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.22 Aprender a multiplicar. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.22</title>
+        <script>
+            var num1 = 0, num2 = 0;
+            
+            function iniciar(){
+                var boton = document.getElementById("verificar");
+                boton.addEventListener("click", verificar, false);
+                pregunta();
+            }
+
+            function pregunta(){
+                num1 = Math.floor(Math.random() * 9);
+                num2 = Math.floor(Math.random() * 9);
+                
+                var multiplicacion = document.getElementById("multiplicacion");
+                multiplicacion.innerHTML = "¿Cuánto es " + num1 + " por " + num2 +"?";
+            }
+
+            function verificar(){
+                var mul = num1 * num2;
+
+                var res = document.getElementById("respuesta");
+                var x = parseInt(res.value);
+
+                if( x == mul){
+                    var resultado = document.getElementById("resultado");
+                    resultado.innerHTML = "Muy bien.";
+                    res.value = null;
+                    num1 = 0;
+                    num2 = 0;
+                    pregunta();
+                }else{
+                    var resultado = document.getElementById("resultado");
+                    resultado.innerHTML = "No. Intente de nuevo.";
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.22</h2>
+        <p>Las computadoras desempeñan un papel cada vez mayor en la educaci&oacute;n. Escriba un programa que 
+            ayude a un estudiante de primaria para que aprenda a multiplicar. Use Math.random para producir dos 
+            enteros positivos de un d&iacute;gito. Despu&eacute;s deber&aacute; mostrar una pregunta tal como <br>
+               ¿Cu&aacute;nto es 6 por 7? <br>
+            A continuaci&oacute;n, el estudiante escribir&aacute; la respuesta en un campo de texto. Su programa 
+            deber&aacute; verificar la respuesta del estudiante. Si es correcta, muestre la cadena "Muy bien" y 
+            genere una nueva pregunta. Si la respuesta es equivocada, muestre la cadena "No. Intente de nuevo." y 
+            deje que el estudiante intente la misma pregunta otra vez en forma repetida, hasta que por fin la saque 
+            bien. Deber&aacute; usarse una funci&oacute;n separada para generar cada pregunta nueva. Esta 
+            funci&oacute;n deber&aacute; llamarse una vez cuando la secuencia de comandos empiece su 
+            ejecuci&oacute;n y cada vez que el usuario responda de manera correcta a la pregunta.
+        </p>
+        <hr>
+        <p id="multiplicacion"></p>
+        <form action="#">
+            <p>
+                <label>Respuesta:
+                    <input type="number" id="respuesta">
+                </label>
+            </p>
+            <input type="button" value="Verificar" id="verificar">
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

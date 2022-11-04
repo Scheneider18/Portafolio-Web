@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.15 esPar. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.15</title>
+    </head>
+    <body>
+        <h2>9.15</h2>
+        <p>Escriba una secuencia de comandos que reciba enteros (uno a la vez) y los pase a la funci&oacute;n 
+            esPar, que utiliza el operador m&oacute;dulo para determinar si un entero es par. La funci&oacute;n 
+            debe recibir un argumento entero y devolver true si el entero es par, y false en caso contrario. Use 
+            los ciclos controlador por centinela y un di&aacute;logo prompt.
+        </p>
+        <hr>
+        <p id="resultado"></p>
+        <script>
+            while ( x != 0){
+                var x = window.prompt("Ingrese el entero, 0 para salir: ", "0");
+                var entero = parseInt(x);
+                if(x != 0){
+                    var resultado = document.getElementById("resultado");
+                    resultado.innerHTML += "¿El número " + entero + " es par? ( true / false) <strong>" + 
+                        esPar(entero) + "</strong> <br>";
+                }
+            }
+
+            function esPar( entero ){
+                if(entero % 2 == 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

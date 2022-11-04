@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.19 Primos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.19</title>
+        <script>
+            function iniciar(){
+                var primos = document.getElementById("primos");
+                for (var i = 2; i <= 10000; ++i){
+                    if(esPrimo(i)){
+                        primos.innerHTML += i +", ";
+                    }
+                }
+
+                var primos2 = document.getElementById("primos2");
+                for (var i = 2; i <= 10000; ++i){
+                    if(esPrimo2(i)){
+                        primos2.innerHTML += i +", ";
+                    }
+                }
+            }
+
+            function esPrimo(numero){ 
+                for(var i = 2; i < numero; i++){ 
+                    if(numero % i == 0){ 
+                        return false; 
+                    } 
+                } 
+                return true;
+            }
+
+            function esPrimo2(numero){ 
+                for(var i = 2; i < Math.sqrt(numero); i++){ 
+                    if(numero % i == 0){ 
+                        return false; 
+                    } 
+                } 
+                return true;
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.19</h2>
+        <p>Se dice que un entero es primo si es mayor que 1 y se puede dividir s&oacute;lo entre 1 y s&iacute; 
+            mismo. Por ejemplo, 2, 3, 5 y 7 son primos pero 4, 6, 8, 9 no.
+        </p>
+        <hr>
+        <p>a) Escriba una funci&oacute;n que determine si un n&uacute;mero es primo.</p>
+        <p><strong>function esPrimo(numero){ <br>
+                for(var i = 2; i < numero; i++){ <br>
+                    if(numero % i == 0){ <br>
+                        return false; <br>
+                    } <br>
+                } <br>
+                return true; <br>
+            }
+        </strong></p>
+        <p>b) Use esta funci&oacute;n en una secuencia de comandos que determine e imprima todos los 
+            n&uacute;meros primos entre 1 y 10,000. ¿Cu&aacute;ntos de estos 10,000 n&uacute;meros  tiene que 
+            probar en realidad antes de asegurar que haya encontrado todos los primos? Muestre los resultados 
+            en un elemento &lt;textarea&gt;.
+        </p>
+        <textarea id="primos" cols="180" rows="10"></textarea>
+        <p>c) En un principio podr&iacute;amos pensar que n/2 es el l&iacute;mite superior con el que debemos 
+            probar par ver si un n&uacute;mero es primo, pero s&oacute;lo necesitamos llegar hasta la ra&iacute;z 
+            cuadrada de n. ¿Por qu&eacute;? Vuelva a escribir el programa usando el m&eacute;todo Math.sqrt para 
+            calcular la ra&iacute;z cuadrada y ejec&uacute;talo de las dos formas. Estime la mejora en el 
+            rendimiento.
+        </p>
+        <textarea id="primos2" cols="180" rows="10"></textarea>
+    </body>
+</html>

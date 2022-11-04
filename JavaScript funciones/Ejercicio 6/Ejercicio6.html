@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.6 Programa JavaScript volumen esfera. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.6</title>
+        <script>
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", mostrarVolumen, false);
+            } // fin de la función iniciar
+
+            function mostrarVolumen(){
+                var campoEntrada = document.getElementById("campoEntrada");
+                var radio = parseFloat(campoEntrada.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "El volumen de la esfera es: " + volumenEsfera(radio);
+            } // fin de la función mostrarVolumen
+
+            function volumenEsfera( radio ){
+                return ( 4.0 / 3.0 ) * Math.PI * Math.pow( radio, 3 );
+            } // fin de la función volumenEsfera
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.6</h2>
+        <p>Escriba un programa de JavaScript completo para pedir al usuario el radio de una esfera y luego llame 
+            a la funci&oacute;n volumenEsfera para calcular y mostrar el volumen de la esfera. Use la 
+            instrucci&oacute;n <br>
+            volumen = ( 4.0 / 3.0 ) * Math.PI * Math.pow( radio, 3 ); <br>
+            para calcular el volumen. El usuario debe introducir el radio en el elemento input de HTML del tipo 
+            "number" en un elemento form. Proporcione al elemento input el valor de id "campoEntrada". Puede usar 
+            este id con el m&eacute;todo getElementById del objeto document para obtener el documento a usar en la 
+            secuencia de comandos. Para acceder a la cadena en campoEntrada, use su propiedad value como en 
+            campoEntrada.value y luego convierta la cadena en n&uacute;mero, usando parseFloat. Use un elemento 
+            input de tipo "button" en el elemento form para que el usuario pueda iniciar el c&aacute;lculo.
+        </p>
+        <hr>
+        <form action="#">
+            <p>
+                <label>
+                    <input type="number" id="campoEntrada">
+                </label>
+                <input type="button" value="Calcular" id="botonCalcular">
+            </p>
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

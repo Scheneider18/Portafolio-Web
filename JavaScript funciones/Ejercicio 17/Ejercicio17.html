@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.17 Fahrenheir o Celsius. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.17</title>
+        <script>
+            function iniciar(){
+                var btnCelsius = document.getElementById("celsius");
+                btnCelsius.addEventListener("click", mostrarCelsius, false);
+
+                var btnFahrenheir = document.getElementById("fahrenheir");
+                btnFahrenheir.addEventListener("click", mostrarFahrenheir, false);
+            }
+
+            function mostrarCelsius(){
+                var temp = document.getElementById("temperatura");
+                var t = parseFloat(temp.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "La temperatura en Celsius es " + celsius(t);
+            }
+
+            function mostrarFahrenheir(){
+                var temp = document.getElementById("temperatura");
+                var t = parseFloat(temp.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "La temperatura en Fahrenheir es " + fahrenheir(t);
+            }
+            
+            function celsius(t){
+                return (5.0 / 9.0 * ( t - 32));
+            }
+
+            function fahrenheir(t){
+                return (9.0 / 5.0 *  t + 32);
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.17 Implemente las siguientes funciones:</h2>
+        <p>a) La funci&oacute;n Celsius devuelve el equivalente en Celsius de una temperatura en Fahrenheir, 
+            mediante el c&aacute;lculo <br>
+            C = 5.0 / 9.0 * ( F - 32 ); <br>
+            b) La funci&oacute; Fahrenheir devuelve el equivalente en Fahrenheir de una temperatura en Celsius, 
+            mediante el c&aacute;lculo <br>
+            F = 9.0 / 5.0 * ( C + 32 ); <br>
+            c) Use estas funciones para escribir una secuencia de comandos que permita al usuario introducir una 
+            temperatura en Fahrenheir o Celsius y muestr el equivalente en Celsius o Fahrenheir. <br>
+            Su documento de HTML debe contener dos botones: uno para iniciar la conversi&oacute;n de Fahrenheir a 
+            Celsius y otro para inicar la conversi&oacute;n de Celsius a Fahrenheir.
+        </p>
+        <hr>
+        <form action="#">
+            <p>
+                <label>Temperatura:
+                    <input type="number" id="temperatura">
+                </label>
+                <input type="button" value="Celsius" id="celsius">
+                <input type="button" value="Fahrenheir" id="fahrenheir">
+            </p>
+            
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

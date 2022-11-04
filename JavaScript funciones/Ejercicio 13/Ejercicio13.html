@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.13 potenciaEntera. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.13</title>
+        <script>
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", mostrarPotencia, false);
+            } // fin de la función iniciar
+
+            function mostrarPotencia(){
+                var base = document.getElementById("base");
+                var b = parseInt(base.value);
+                var exponente = document.getElementById("exponente")
+                var e = parseInt(exponente.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "La potencia con base " + b + " y exponente " + e + " es: " 
+                    + potenciaEntera( b, e );
+            }
+
+            function potenciaEntera( base, exponente ){
+                var ba = base;
+                for(var i = 1; i < exponente; ++i){
+                    base *= ba;
+                }
+                return base;
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.13</h2>
+        <p>Escriba una funci&oacute;n llamada potenciaEntera( base, exponente ) que devuelva el valor de 
+            base<sup>exponente</sup>. <br>
+            Por ejemplo, potenciaEntera ( 3, 4 ) = 3 * 3 * 3 * 3. Suponga que exponente y base son enteros. La 
+            funci&oacute;n potenciaEntera deber&iacute;a usar una instrucci&oacute;n for o while para controlar 
+            el c&aacute;lculo. Incorpore esta funci&oacute;n en una secuencia de comandos que lea valores enteros 
+            de un formulario HTML5 para base y exponente, y que realice el c&aacute;lculo con la funci&oacute;n 
+            potenciaEntera. El formulario de HTML5 deber&aacute; consistir de dos campos de texto y un bot&oacute;n 
+            para iniciar el c&aacute;lculo.
+        </p>
+        <hr>
+        <form action="#">
+            <p>Potencia de n&uacute;meros enteros:
+                <label>Base:
+                    <input type="number" id="base">
+                </label>
+                <label>Exponente:
+                    <input type="number" id="exponente">
+                </label>
+                <input type="button" value="Calcular" id="botonCalcular">
+            </p>
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

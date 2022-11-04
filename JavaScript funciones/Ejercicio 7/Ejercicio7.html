@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.7 Área del círculo. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.7</title>
+        <script>
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", mostrarArea, false);
+            } // fin de la función iniciar
+
+            function mostrarArea(){
+                var campoEntrada = document.getElementById("campoEntrada");
+                var radio = parseFloat(campoEntrada.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "El area del círculo es: " + areaCirculo(radio);
+            }
+
+            function areaCirculo( radio ){
+                return Math.PI * Math.pow( radio, 2 );
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.7</h2>
+        <p>Escriba una secuencia de comandos que use un formulario (form) para obtener el radio de un 
+            c&iacute;rculo del usuario y despu&eacute;s llame a la funci&oacute;n areaCirculo para calcular el 
+            &aacute;rea del c&iacute;rculo y mostrar el resultado en un p&aacute;rrafo en la p&aacute;gina.
+        </p>
+        <hr>
+        <form action="#">
+            <p>
+                <label>
+                    <input type="number" id="campoEntrada">
+                </label>
+                <input type="button" value="Calcular" id="botonCalcular">
+            </p>
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

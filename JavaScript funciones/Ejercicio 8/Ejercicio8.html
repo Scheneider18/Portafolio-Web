@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.8 Cargos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.8</title>
+        <script>
+            var totalC = 0;
+
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", mostrarCargo, false);
+            } // fin de la función iniciar
+
+            function mostrarCargo(){
+                var campoEntrada = document.getElementById("campoEntrada");
+                var horas = parseFloat(campoEntrada.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML += "El cargo del cliente con "+ horas + " horas  es: " + calcularCargos(horas) + ".<br>";
+                var total = document.getElementById("total");
+                total.innerHTML = "El total es: " + totalC;
+            }
+
+            function calcularCargos( horas ){
+                if ( horas <= 3.00 ){
+                    totalC += 2;
+                    return "sin cargos, total: 2";
+                }else if ( horas == 24.00 ){
+                    totalC += 12;
+                    return "10, total: 12";
+                }else{
+                    cargo = horas - 3;
+                    entero = Math.ceil(cargo);
+                    totalC += 2 + (entero * .50);
+                    return (entero * .50) + " " + ", total:" + (2 + (entero * .50));
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.8</h2>
+        <p>Un estacionamiento cobra una cuota m&iacute;nima de $2 por estacionarse hasta tres horas. El 
+            estacionamiento cobra $0.50 adicionales por cada hora o fracci&oacute;n que exceda las tres horas. El 
+            cargo m&aacute;ximo por un periodo de 24 horas es de $10.00. Suponga que no hay autos que se 
+            estacionen por m&aacute;s de 24 horas a la vez. Escriba una secuencia de comandos que calculo y muestre 
+            los cargos de estacionamiento por cada cliente que haya estacionado su auto en este lote ayer. Debe usar 
+            un elemento form para recibir del usuario las horas que se estacion&oacute; cada cliente. El programa 
+            debe mostrar el cargo para el cliente actual; adem&aacute;s debe calcular y mostrar el total corriente 
+            de los recibos de ayer. El programa debe usar la funci&oacute;n calcularCargos para determinar el cargo 
+            para cada cliente.
+        </p>
+        <hr>
+        <form action="#">
+            <p>
+                <label>
+                    <input type="number" id="campoEntrada">
+                </label>
+                <input type="button" value="Calcular" id="botonCalcular">
+            </p>
+        </form>
+        <p id="resultado"></p>
+        <p id="total"></p>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.16 Segmentos de programa. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.16</title>
+    </head>
+    <body>
+        <h2>9.16 Escriba segmentos de programa que realicen cada una de las siguientes tareas: </h2>
+        <hr>
+        <p>a) Calcule la parte entera del cociente cuando el entero a se divide entre el entero b.</p>
+        <p><strong>var x = Math.trunc( ( a / b ) );</strong></p>
+        <p>b) Calcule el residuo entero cuando el entero a se divide entre el entero b.</p>
+        <p><strong>var x = Math.trunc( ( a % b ) ); </strong></p>
+        <p>c) Use las piezas de programa que se desarrollaron en las partes (a) y (b) para escribir una 
+            funci&oacute;n llamda mostrarDigitos que reciba un entero entre 1 y 99999, para luego imprimirlo 
+            como una serie de d&iacute;gitos, de los cuales cada par se separa mediante dos espacios. Por ejemplo, 
+            el entero 4562 deber&iacute;a imprimirse como <br>
+            4  5  6  2
+        </p>
+        <p><strong>function mostrarDigitos(numero) { <br>
+            var num = parseInt(numero); <br> 
+            var temp = 0, div = 1;
+            for (var i = 1; i < numero.length; ++i){ <br>
+                div *= 10;<br>
+            } <br>
+            for (var i = 1; i <= numero.length; ++i){ <br>
+                if(i == 1){ <br>
+                    temp = Math.trunc( (num / div)); <br>
+                    div /= 10;<br>
+                }else if ( i == numero.length){<br>
+                    temp = Math.trunc( (num % 10));;<br>
+                }else{<br>
+                    temp = Math.trunc( ((num / div) % 10) );<br>
+                    div /= 10;<br>
+                }<br>
+                resultado += temp + "  ";<br>
+            }<br>
+            }
+        </strong></p>
+        <p>d) Incorpore la funci&oacute;n desarrollada en la parte (c) en una secuencia de comandos que reciba 
+            un entero de un di&aacute;logo prompt e invoque mostrarDigitos para pasar a la funci&oacute;n 
+            el entero introducido.
+        </p>
+        <p><strong>function iniciar(){ <br>
+                var x = window.prompt("Ingrese un entero entre el 1 y 99999","0");<br>
+                var num = parseInt(x);<br>
+                mostrarDigitos(x);<br>
+            }<br>
+            function mostrarDigitos(numero) { <br>
+            var num = parseInt(numero); <br> 
+            var temp = 0, div = 1;
+            for (var i = 1; i < numero.length; ++i){ <br>
+                div *= 10;<br>
+            } <br>
+            for (var i = 1; i <= numero.length; ++i){ <br>
+                if(i == 1){ <br>
+                    temp = Math.trunc( (num / div)); <br>
+                    div /= 10;<br>
+                }else if ( i == numero.length){<br>
+                    temp = Math.trunc( (num % 10));;<br>
+                }else{<br>
+                    temp = Math.trunc( ((num / div) % 10) );<br>
+                    div /= 10;<br>
+                }<br>
+                resultado += temp + "  ";<br>
+            }<br>
+            } <br>
+            window.addEventListener("load", iniciar, false);
+        </strong></p>
+    </body>
+</html>

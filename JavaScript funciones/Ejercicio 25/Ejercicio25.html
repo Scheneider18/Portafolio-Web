@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.25 Adivinar el número. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.25</title>
+        <script>
+            var numero = 0;
+
+            function iniciar(){
+                var boton = document.getElementById("verificar");
+                boton.addEventListener("click", verificar, false);
+
+                numeroAleatorio();
+            }
+
+            function numeroAleatorio(){
+                var x = Math.floor(Math.random() * (1000 - 1 + 1) + 1);
+                numero = x;
+                console.log(x);
+            }
+
+            function verificar(){
+                var respuesta = document.getElementById("respuesta");
+                var x = parseInt(respuesta.value);
+
+                if( x == numero ){
+                    var resultado = document.getElementById("resultado");
+                    resultado.innerHTML = "Felicidades. ¡Adivinó el número!"
+                    respuesta.value = null;
+
+                    numeroAleatorio();
+                } else if ( x < numero ){
+                    var resultado = document.getElementById("resultado");
+                    resultado.innerHTML = "Demasiado bajo. Intente de nuevo."
+                    respuesta.value = null;
+                } else if ( x > numero ){
+                    var resultado = document.getElementById("resultado");
+                    resultado.innerHTML = "Demasiado alto. Intente de nuevo."
+                    respuesta.value = null;
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.25</h2>
+        <p>Escriba una secuencia de comandos que juegue a "adivinar el n&uacute;mero" de la siguiente manera: 
+            su programa debe elegir un n&uacute;mero a adivinar, para lo cual se selecciona un entero aleatorio 
+            en el rango de 1 a 1000. La secuencia de comandos muestra el indicador Adivine un número entre 1 y 
+            1000 enseguida de un campo de texto. El jugador escribe su primer intento en el campo de texto y hace 
+            clic en un bot&oacute;n para enviarlo a la secuencia de comandos. Si el intento del jugador es 
+            incorrecto, su programa deber&aacute; mostrar los mensaje "Demasiado alto. Intente de nuevo" o 
+            "Demasiado abajo. Intente de nuevo", para ayudarle a "acercarse" a la respuesta correcta, y 
+            deber&aacute;borrar el campo de texto para que el usuario pueda introducir el siguiente intento. Cuando 
+            el usuario introduzca la respuesta correcta, muestre el mensaje "Felicidades. ¡Adivino el 
+            n&uacute;mero!" y borre el campo de texto para que el usuario pueda jugar otra vez.
+        </p>
+        <hr>
+        <form action="#">
+            <p>
+                <label>Adivine un n&uacute;mero entre 1 y 1000:
+                    <input type="number" id="respuesta">
+                </label>
+            </p>
+            <input type="button" value="Verificar" id="verificar">
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

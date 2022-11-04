@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.18 minimo3. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.18</title>
+        <script>
+            function iniciar(){
+                var x = window.prompt("Ingrese el primer número: ", "0");
+                var num1 = parseFloat(x);
+                var y = window.prompt("Ingrese el segundo número: ", "0");
+                var num2 = parseFloat(y);
+                var z = window.prompt("Ingrese el tercer número: ", "0");
+                var num3 = parseFloat(z);
+                
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "El número menor de los ingresados es: " + minimo3( num1, num2, num3 );
+            }
+
+            function minimo3( x, y, z ){
+                return Math.min( x, y, z )
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.18</h2>
+        <p>Escriba una funci&oacute;n llamada minimo3 que devuelva el menor de tres n&uacute;meros de punto 
+            flotante. Use la funci&oacute;n Math.min para implementar minimo3. Incorpore la funci&oacute;n en una 
+            secuencia de comandos que lea tres valores del usuario y determine el valor más pequeño.
+        </p>
+        <hr>
+        <p id="resultado"></p>
+    </body>
+</html>

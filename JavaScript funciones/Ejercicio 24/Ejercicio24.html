@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.24 Modifique el programa 9.23. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.24</title>
+        <script>
+            var num1 = 0, num2 = 0;
+            var preguntas = 1, correc = 0, incorrec = 0;
+            function iniciar(){
+                var boton = document.getElementById("verificar");
+                boton.addEventListener("click", verificar, false);
+                pregunta();
+            }
+
+            function pregunta(){
+                console.log(preguntas);
+                if( preguntas == 10){
+                    var con = incorrec + correc;
+                    var porcentajeC = (correc / con) * 100;
+                    if(porcentajeC < 75){
+                        window.alert("Pide ayuda adicional a su instructor");
+                        preguntas = 1;
+                        pregunta();
+                    }else{
+                        window.alert("Excelente");
+                    }
+                }else{
+                    num1 = Math.floor(Math.random() * 9);
+                    num2 = Math.floor(Math.random() * 9);
+                
+                    var multiplicacion = document.getElementById("multiplicacion");
+                    multiplicacion.innerHTML = "¿Cuánto es " + num1 + " por " + num2 +"?";
+                }
+                
+            }
+
+            function verificar(){
+                var mul = num1 * num2;
+
+                var res = document.getElementById("respuesta");
+                var x = parseInt(res.value);
+
+                if( x == mul){
+                    correcta();
+                    res.value = null;
+                    num1 = 0;
+                    num2 = 0;
+                    correc++;
+                    preguntas++;
+                    pregunta();
+                }else{
+                    incorrec++;
+                    incorrecta();
+                }
+            }
+
+            function correcta(){
+                var resultado = document.getElementById("resultado");
+                var x = Math.floor(Math.random() * ( 4 - 1 + 1 ) + 1);
+                //console.log(x);
+                
+                switch(x){
+                    case 1: 
+                        resultado.innerHTML = "Muy bien.";
+                        break;
+                    case 2: 
+                        resultado.innerHTML = "Excelente.";
+                        break;
+                    case 3: 
+                        resultado.innerHTML = "Buen trabajo.";
+                        break;
+                    case 4: 
+                        resultado.innerHTML = "Siga asi.";
+                        break;
+                }
+            }
+
+            function incorrecta(){
+                var resultado = document.getElementById("resultado");
+                var x = Math.floor(Math.random() * ( 4 - 1 + 1 ) + 1);
+                //console.log(x);
+                
+                switch(x){
+                    case 1: 
+                        resultado.innerHTML = "No. Intente de nuevo.";
+                        break;
+                    case 2: 
+                        resultado.innerHTML = "Equivocado. Trate una vez más.";
+                        break;
+                    case 3: 
+                        resultado.innerHTML = "No se dé por vencido.";
+                        break;
+                    case 4: 
+                        resultado.innerHTML = "No. Siga intentando.";
+                        break;
+                }
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.24</h2>
+        <p>Los sistemas m&aacute;s sofisticados de instrucci&oacute;n asistida por computadora monitorean el 
+            rendimiento del estudiante durante cierto tiempo. La decisi&oacute;n de comenzar un nuevo tema se 
+            basa a menudo en el &eacute;xito del estudiante con los temas anteriores. Modifique el programa 
+            del ejercicio 9.23 para contar el n&uacute;mero de respuestas correctas e incorrectas que 
+            escribi&oacute; el estudiante. Una vez que el estudiante responda 10 preguntas, usted deber&aacute; 
+            calcular el porcentaje de respuestas correctas. Si el procentaje es menor del 75 por ciento, muestre 
+            "Pida ayuda adicional a su instructor" y reinicie el cuestionario para que otro estudiante pueda 
+            intentarlo.
+        </p>
+        <hr>
+        <p id="multiplicacion"></p>
+        <form action="#">
+            <p>
+                <label>Respuesta:
+                    <input type="number" id="respuesta">
+                </label>
+            </p>
+            <input type="button" value="Verificar" id="verificar">
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>

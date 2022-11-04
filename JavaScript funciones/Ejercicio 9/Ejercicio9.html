@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 9.9 Distancia entre dos puntos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 9.9</title>
+        <script>
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", mostrarDistancia, false);
+            } // fin de la función iniciar
+
+            function mostrarDistancia(){
+                var campox1 = document.getElementById("x1");
+                var x1 = parseFloat(campox1.value);
+                var campoy1 = document.getElementById("y1");
+                var y1 = parseFloat(campoy1.value);
+                var campox2 = document.getElementById("x2");
+                var x2 = parseFloat(campox2.value);
+                var campoy2 = document.getElementById("y2");
+                var y2 = parseFloat(campoy2.value);
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = "La distacia entre ambos puntos es: " + distancia( x1, y1, x2, y2 );
+            }
+
+            function distancia( x1, y1, x2, y2 ){
+                cuadrado1 = Math.pow( (x2 - x1), 2 );
+                cuadrado2 = Math.pow( (y2 - y1), 2 );
+                return Math.sqrt( (cuadrado1 + cuadrado2) );
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>9.9</h2>
+        <p>Escriba una funci&oacute;n llamada distancia, que calcule la distancia entre dos puntos (x1,y1) y 
+            (x2,y2). Todos los n&uacute;meros y valores de retorno deben ser valores de punto flotante. Incorpore 
+            esta funci&oacute;n en una secuencia de comandos que permita al usuario introducir las coordenadas de 
+            los puntos mediante un formulario de HTML5.
+        </p>
+        <hr>
+        <form action="#">
+            <p> Valores del punto A: 
+                <label> x1
+                    <input type="number" id="x1" required>
+                </label>
+                <label> y1
+                    <input type="number" id="y1" required>
+                </label>
+            </p>
+            <p> Valores del punto B: 
+                <label> x2
+                    <input type="number" id="x2" required>
+                </label>
+                <label> y2
+                    <input type="number" id="y2" required>
+                </label>
+            </p>
+            <input type="button" value="Calcular" id="botonCalcular">
+        </form>
+        <p id="resultado"></p>
+    </body>
+</html>
