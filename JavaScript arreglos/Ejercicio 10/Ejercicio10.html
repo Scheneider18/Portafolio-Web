@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 10.10 Personal de ventas. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 10.10</title>
+        <script>
+            var empleados = new Array();
+            
+            function iniciar(){
+                var boton = document.getElementById("botonCalcular");
+                boton.addEventListener("click", calcular, false);
+            }
+
+            function calcular(){
+                var ventasB = document.getElementById("ventas").value;
+                var v = parseFloat(ventasB);
+
+                var salario = (v * 0.09) + 200;
+
+                if(empleados == null){
+                    empleados[0] = parseInt(salario);
+                }else{
+                    var indice = empleados.length;
+                    empleados[indice] = parseInt(salario);
+                }
+                imprimirRangos();
+            }
+
+            function imprimirRangos(){
+                var contenido = "Rangos: <br>";
+                var rango1 = 0, rango2 = 0, rango3 = 0, rango4 = 0, rango5 = 0, rango6 = 0, rango7 = 0,
+                    rango8 = 0, rango9 = 0;
+                for (var elemento in empleados){
+                    if(empleados[elemento] >= 200 && empleados[elemento] < 300 ){
+                        rango1++;
+                    }
+                    if(empleados[elemento] >= 300 && empleados[elemento] < 400 ){
+                        rango2++;
+                    }
+                    if(empleados[elemento] >= 400 && empleados[elemento] < 500 ){
+                        rango3++;
+                    }
+                    if(empleados[elemento] >= 500 && empleados[elemento] < 600 ){
+                        rango4++;
+                    }
+                    if(empleados[elemento] >= 600 && empleados[elemento] < 700 ){
+                        rango5++;
+                    }
+                    if(empleados[elemento] >= 700 && empleados[elemento] < 800 ){
+                        rango6++;
+                    }
+                    if(empleados[elemento] >= 800 && empleados[elemento] < 900 ){
+                        rango7++;
+                    }
+                    if(empleados[elemento] >= 900 && empleados[elemento] < 1000 ){
+                        rango8++;
+                    }
+                    if(empleados[elemento] >= 1000 ){
+                        rango9++;
+                    }
+                }
+                contenido += "200-299: " + rango1 +"<br>" + "300-399: " + rango2 +"<br>" + "400-499: " + rango3 +
+                    "<br>" + "500-599: " + rango4 + "<br>" + "600-699: " + rango5 + "<br>" + "700-799: " + 
+                    rango6 + "<br>" + "800-899: " + rango7 + "<br>" + "900-999: " + rango8 + "<br>" + "1000-más: " +
+                    rango9;
+
+                document.getElementById("resultados").innerHTML = contenido;
+            }
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>10.10</h2>
+        <p>Use un arreglo unidimensional para resolver el siguiente problema: una empresa paga su personal de 
+            ventas con base en comisiones. El personal de ventas recibe $200 por semana más el 9 por ciento de 
+            sus ventas brutas para esa semana. Por ejemplo, un vendedor con ventas brutas de $5000 en una semana 
+            recibe $200 más el 9 por ciento de $5000, o un total de $650. Escriba una secuencia de comandos 
+            (usando un arreglo de contadores) que obtenga las ventas brutas de cada empleado por medio de un 
+            formulario de HTML5 y determine cuántos vendedores obtuvieron salarios en cada uno de los siguientes 
+            rangos (suponga que el salario de cada vendedor se trunca a un monto entero): <br>
+            a) $200 a 299 <br>
+            b) $300 a 399 <br>
+            c) $400 a 499 <br>
+            d) $500 a 599 <br>
+            e) $600 a 699 <br>
+            f) $700 a 799 <br>
+            g) $800 a 899 <br>
+            h) $900 a 999 <br>
+            i) $1000 y más
+        </p>
+        <hr>
+        <form action="#">
+            <p>Calcular Salarios</p>
+            <p>
+                <label>Ventas brutas del empleado: 
+                    <input type="number" id="ventas">
+                </label>
+            </p>
+            <input type="button" value="Calcular" id="botonCalcular">
+        </form>
+        <p id="resultados"></p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 10.8 Instrucciones JavaScript. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 10.8</title>
+    </head>
+    <body>
+        <h2>10.8 Escriba instrucciones de JavaScript para realizar cada una de las siguientes tareas: </h2>
+        <hr>
+        <p>a) Mostrar el valor del séptimo elemeneto del arreglo f.</p>
+        <p><strong>document.write(f[7]);</strong></p>
+        <p>b) Inicializar cada uno de los cinco elementos del arreglo unidimensional g en 8.</p>
+        <p><strong>var g = [ 8, 8, 8, 8, 8 ];</strong></p>
+        <p>c) Calcular el total de los elemento del arreglo c, que contiene 100 elementos numéricos.</p>
+        <p><strong>var total = 0; <br>
+            for (var elementos in c){ <br>
+                total += c[elemento]; <br>
+            }
+        </strong></p>
+        <p>d) Copiar el arreglo a de 11 elementos en la primera porción del arreglo b, que contiene 34 
+            elementos.
+        </p>
+        <p><strong>for (var i = 0; i < a.length; ++i ){ <br>
+                b[i] = a[i]; <br>
+            }
+        </strong></p>
+        <p>e) Determinar e imprimir el valor más pequeño y el más grande contenido en el arreglo w de 99 
+            elemento de punto flotante.
+        </p>
+        <p><strong>var min = Math.min(w); <br>
+            document.write(min); <br>
+            var max = Math.max(w); <br>
+            document.write(max);
+        </strong></p>
+    </body>
+</html>
