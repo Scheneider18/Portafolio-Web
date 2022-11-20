@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- Ejercicios de autoevaluación -->
+<!-- 11.16 Cadenas que terminen con "ed". -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicios de autoevaluaci&oacute;n: 11.6</title>
+        <script>
+            function iniciar(){
+                var boton = document.getElementById("botonVerificar");
+                boton.addEventListener("click", verificar, false);
+            }
+
+            function verificar(){
+                var contenido = "";
+                var texto = document.getElementById("cadenas").value;
+                var tokens = texto.split(".");
+                for(var i = 0; i < tokens.length; ++i){
+                    var ocurrencias = tokens[i].toLowerCase().lastIndexOf("ed");
+                    if(ocurrencias != -1){
+                        contenido += tokens[i] + "\n";
+                    }
+                }
+                document.getElementById("resultados").innerHTML = contenido
+            }
+
+            window.addEventListener("load", iniciar, false);
+        </script>
+    </head>
+    <body>
+        <h2>11.16</h2>
+        <p>Escriba una secuencia de comandos que lea una serie de cadenas e imprima en un elemento textarea de 
+            HTML5 sólo aquellas cadenas que terminen con los caracteres "ed".
+        </p>
+        <hr>
+        <p>Cadenas:</p>
+        <textarea id="cadenas" cols="80" rows="15"></textarea>
+        <p>
+            <input type="button" value="Verificar" id="botonVerificar">
+        </p>
+        <textarea id="resultados" cols="80" rows="15"></textarea>
+    </body>
+</html>
